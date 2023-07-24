@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter&family=Nunito&family=Pacifico&family=Poppins&display=swap');
+
+$green: #00880c;
+$blue: #060a18;
+$white: #eee;
+
+$darkBlue: #00000f;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: $darkBlue;
+}
+
+.form{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ddd;
+    position: relative;
+    gap: 15px;
+
+    &::before{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgb(93, 126, 243,.2);
+        z-index: -5;
+        border-radius: 10px;
+        transform: rotate(-5deg);
+    }
+
+    .header{
+        margin: auto;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        
+        span{
+            &:first-child{
+                font-weight: bold;
+                font-size: 1.5rem;
+                color: $blue;
+            }
+            &:last-child{
+                font-size: 1.5rem;
+                color: $green;
+                font-family: 'Courier Prime', monospace;
+            }
+        }
+    }
+    
+    .head-text{
+        margin: auto;
+        font-size: 20px;
+        color: black;
+        margin-bottom: 30px;
+    }
+
+    .username,.password,.email,.confirm-password{
+        display: flex;
+        flex-direction: column;
+
+        .info{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a{
+                color: $green;
+                text-decoration: none;
+                font-size: .9rem;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        label{
+            font-size: .9rem;
+            color: black;
+        }
+
+        input{
+            width: 100%;
+            background-color: #aaa;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            padding: 8px;
+            font-size: .9rem;
+            color: black;
+        }
+    }
+
+    .bottom{
+        display: flex;
+        flex-direction: column;
+
+        a{
+            text-decoration: none;
+            font-size: .9rem;
+            color: $white;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+        button{
+            border-radius: 5px;
+            padding: 8px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background-color: $green;
+            color: $white;
+        }
+    }
+
+    .already{
+        margin: auto;
+        font-size: .9rem;
+        color: black;
+
+        a{
+            text-decoration: none;
+            color: $green;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .form{
+        width: 80vw;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+    .form{
+        width: 60vw;
+    }
+}

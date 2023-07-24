@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jcode | Checkout</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="../asset/images/code.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
+</head>
+<body>
+    <div class="checkout" id="checkout">
+        <div class="checkout-header">
+            <img src="../asset/images/web.jpg" alt="" class="class-img">
+            <span class="course-name">Web Develoment</span>
+        </div>
+        <div class="checkout-duration">
+            <select name="month" id="select-month">
+                <option value="3">3 Months</option>
+                <option value="6">6 Months</option>
+                <option value="12">12 Months</option>
+            </select>
+        </div>
+        <div class="checkout-discount-code">
+            <input type="text" placeholder="Discount code">
+            <button>Check</button>
+        </div>
+        <div class="checkout-price-discount">
+            <div class="checkout-price">
+                <span>Price</span>
+                <span class="course-price">$45</span>
+            </div>
+            <div class="checkout-discount">
+                <span>Discount</span>
+                <span>0%</span>
+            </div>
+        </div>
+        <div class="checkout-total">
+            <span>Total</span>
+            <span class="total-price">$45</span>
+        </div>
+        <button class="checkout-btn">Checkout</button>
+    </div>
+    <div class="classes">
+        <div class="classes-header">Choose your class</div>
+        <div class="classes-grid">
+            <div class="class" data-price-3="45" data-price-6="120" data-price-12="270">
+                <div class="header">Web Develoment</div>
+                <div class="content">
+                    <img src="../asset/images/web.jpg" alt="">
+                </div>
+                <div class="class-info">
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">groups</span>
+                        <span>576</span>
+                    </div>
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">library_books</span>
+                        <span>12 Topics</span>
+                    </div>
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">grade</span>
+                        <span>4.6/5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="class" data-price-3="25" data-price-6="100" data-price-12="250">
+                <div class="header">Web Design</div>
+                <div class="content">
+                    <img src="../asset/images/design.jpg" alt="">
+                </div>
+                <div class="class-info">
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">groups</span>
+                        <span>412</span>
+                    </div>
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">library_books</span>
+                        <span>10 Topics</span>
+                    </div>
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">grade</span>
+                        <span>4.5/5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="class" data-price-3="40" data-price-6="115" data-price-12="265">
+                <div class="header">Front End Development</div>
+                <div class="content">
+                    <img src="../asset/images/frontend.jpg" alt="">
+                </div>
+                <div class="class-info">
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">groups</span>
+                        <span>589</span>
+                    </div>
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">library_books</span>
+                        <span>15 Topics</span>
+                    </div>
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">grade</span>
+                        <span>4.8/5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="class" data-price-3="40" data-price-6="115" data-price-12="265">
+                <div class="header">Back End Development</div>
+                <div class="content">
+                    <img src="../asset/images/backend.jpg" alt="">
+                </div>
+                <div class="class-info">
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">groups</span>
+                        <span>584</span>
+                    </div>
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">library_books</span>
+                        <span>14 Topics</span>
+                    </div>
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">grade</span>
+                        <span>4.8/5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="class" data-price-3="45" data-price-6="120" data-price-12="270">
+                <div class="header">Mobile App Develoment</div>
+                <div class="content">
+                    <img src="../asset/images/mobile.jpg" alt="">
+                </div>
+                <div class="class-info">
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">groups</span>
+                        <span>612</span>
+                    </div>
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">library_books</span>
+                        <span>14 Topics</span>
+                    </div>
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">grade</span>
+                        <span>4.7/5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="class" data-price-3="50" data-price-6="125" data-price-12="275">
+                <div class="header">Game Development</div>
+                <div class="content">
+                    <img src="../asset/images/game.jpg" alt="">
+                </div>
+                <div class="class-info">
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">groups</span>
+                        <span>676</span>
+                    </div>
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">library_books</span>
+                        <span>15 Topics</span>
+                    </div>
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">grade</span>
+                        <span>4.5/5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="class" data-price-3="55" data-price-6="130" data-price-12="280">
+                <div class="header">Software Development</div>
+                <div class="content">
+                    <img src="../asset/images/software.jpg" alt="">
+                </div>
+                <div class="class-info">
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">groups</span>
+                        <span>723</span>
+                    </div>
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">library_books</span>
+                        <span>15 Topics</span>
+                    </div>
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">grade</span>
+                        <span>4.7/5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="class" data-price-3="55" data-price-6="130" data-price-12="280">
+                <div class="header">Data Science</div>
+                <div class="content">
+                    <img src="../asset/images/data.jpg" alt="">
+                </div>
+                <div class="class-info">
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">groups</span>
+                        <span>778</span>
+                    </div>
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">library_books</span>
+                        <span>16 Topics</span>
+                    </div>
+                    <div class="class-info-item">
+                        <span class="material-symbols-outlined">grade</span>
+                        <span>4.6/5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-top">
+            <div class="top-left">
+                <div class="header">
+                    <span class="j-logo">J</span>
+                    <span class="code-logo">code</span>
+                </div>
+                <p class="text">Improve yourseft and find your dream job here</p>
+                <div class="medsos">
+                    <a href="./" class="twt">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path>
+                        </svg>
+                    </a>
+                    <a href="./" class="ln">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                            <path d="M8 11l0 5"></path>
+                            <path d="M8 8l0 .01"></path>
+                            <path d="M12 16l0 -5"></path>
+                            <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+                        </svg>
+                    </a>
+                    <a href="./" class="yt">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z"></path>
+                            <path d="M10 9l5 3l-5 3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-link">
+                <ul class="footer-list">
+                    <li>
+                        <a href="./">Contact us</a>
+                    </li>
+                    <li>
+                        <a href="./">E-Learning</a>
+                    </li>
+                    <li>
+                        <a href="./">Bootcamp & programs</a>
+                    </li>
+                    <li>
+                        <a href="./">Students</a>
+                    </li>
+                </ul>
+                <ul class="footer-list">
+                    <li>
+                        <a href="./">Help center</a>
+                    </li>
+                    <li>
+                        <a href="./">Terms</a>
+                    </li>
+                    <li>
+                        <a href="./">Blog</a>
+                    </li>
+                    <li>
+                        <a href="./">Privacy policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>Copyright © 2023 Jcode</span>
+            <span>
+                <span>Made with</span>
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="red" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+                    </svg>
+                </span>
+                <span>by Umar</span>
+            </span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter&family=Nunito&family=Pacifico&family=Poppins&display=swap');
+
+$green: #00880c;
+$blue: #060a18;
+$white: #eee;
+
+$darkBlue: #00000f;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: $darkBlue;
+    display: flex;
+    flex-direction: column;
+}
+
+@import "../../style/navbar/navbar.css";
+
+.head{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10vw;
+    color: $white;
+    gap: 1rem;
+
+    &-header{
+        font-size: 30px;
+        font-weight: 700;
+    }
+    
+    &-content{
+        display: flex;
+        gap: 3rem;
+
+        .head-left{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .join-now{
+                padding: 0.3rem 0.5rem;
+                border: 2px solid $green;
+                width: fit-content;
+                color: $white;
+                text-decoration: none;
+                border-radius: .3rem;
+                transition: all .2s;
+
+                &:hover{
+                    background-color: $green;
+                }
+            }
+        }
+    
+        .head-right{
+            width: 50%;
+            display: flex;
+    
+            img{
+                width: 100%;
+                border-radius: .2rem;
+                box-shadow: 0 0 10px -2px rgb(255,255,255,.2);
+            }
+        }
+    }
+}
+
+.target-history{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    color: $white;
+    overflow: hidden;
+    border-radius: .3rem;
+    box-shadow: 0 0 10px -2px rgb(0,0,0,.7);
+
+    .target,.history{
+        display: flex;
+
+        &-left{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            background-color: rgb(0,0,0,.3);
+
+            svg{
+                width: 5rem;
+                height: 5rem;
+                color: $green;
+            }
+
+            .header{
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+
+            .text{
+                width: 70%;
+                margin-top: 1rem;
+                text-align: center;
+            }
+        }
+
+        &-right{
+            display: flex;
+            width: 50%;
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    .target{
+        flex-direction: row-reverse;
+    }
+}
+
+@import "../../style/footer/footer.css";
+
+@media screen and (max-width: 600px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+    }
+
+    .head{
+        &-content{
+            flex-direction: column-reverse;
+            gap: 1rem;
+
+            .head-left,.head-right{
+                width: 100%;
+                gap: 1rem;
+            }
+        }
+    }
+
+    .target-history{
+        width: 90vw;
+        gap: 1rem;
+
+        .target,.history{
+            flex-direction: column;
+            border-radius: .3rem;
+            
+            &-left,&-right{
+                width: 100%;
+            }
+
+            &-left{
+                padding: 1rem;
+
+                .text{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .head{
+        padding: 0 5vw;
+        
+        &-content{
+            gap: 2rem;
+        }
+    }
+
+    .target-history{
+        width: 90vw;
+
+        .target,.history{
+            flex-direction: column;
+            border-radius: .3rem;
+            
+            &-left,&-right{
+                width: 100%;
+            }
+
+            &-left{
+                padding: 1rem;
+
+                .text{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

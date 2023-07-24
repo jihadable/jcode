@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter&family=Nunito&family=Pacifico&family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #00000f;
+}
+
+.form {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ddd;
+  position: relative;
+  gap: 15px;
+}
+.form::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(93, 126, 243, 0.2);
+  z-index: -5;
+  border-radius: 10px;
+  transform: rotate(-5deg);
+}
+.form .header {
+  margin: auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+.form .header span:first-child {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #060a18;
+}
+.form .header span:last-child {
+  font-size: 1.5rem;
+  color: #00880c;
+  font-family: "Courier Prime", monospace;
+}
+.form .head-text {
+  margin: auto;
+  font-size: 20px;
+  color: black;
+  margin-bottom: 30px;
+}
+.form .username, .form .password, .form .email, .form .confirm-password {
+  display: flex;
+  flex-direction: column;
+}
+.form .username .info, .form .password .info, .form .email .info, .form .confirm-password .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form .username .info a, .form .password .info a, .form .email .info a, .form .confirm-password .info a {
+  color: #00880c;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.form .username .info a:hover, .form .password .info a:hover, .form .email .info a:hover, .form .confirm-password .info a:hover {
+  text-decoration: underline;
+}
+.form .username label, .form .password label, .form .email label, .form .confirm-password label {
+  font-size: 0.9rem;
+  color: black;
+}
+.form .username input, .form .password input, .form .email input, .form .confirm-password input {
+  width: 100%;
+  background-color: #aaa;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 0.9rem;
+  color: black;
+}
+.form .bottom {
+  display: flex;
+  flex-direction: column;
+}
+.form .bottom a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #eee;
+}
+.form .bottom a:hover {
+  text-decoration: underline;
+}
+.form .bottom button {
+  border-radius: 5px;
+  padding: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #00880c;
+  color: #eee;
+}
+.form .already {
+  margin: auto;
+  font-size: 0.9rem;
+  color: black;
+}
+.form .already a {
+  text-decoration: none;
+  color: #00880c;
+}
+.form .already a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  .form {
+    width: 80vw;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .form {
+    width: 60vw;
+  }
+}/*# sourceMappingURL=style.css.map */
