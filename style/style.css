@@ -227,11 +227,11 @@ body {
 }
 
 .footer {
-  border-top: 1px solid #bbb;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #13132f;
+  background-color: rgba(93, 126, 243, 0.2);
   color: #eee;
 }
 .footer-top {
@@ -319,41 +319,43 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  .footer {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .footer-top {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer-top .footer-link {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .footer-top .footer-link .footer-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-bottom {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+  .footer {
+    width: 100%;
+  }
+  .footer .footer-link {
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 600px) {
   body {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .nav-bar {
-    justify-content: space-between;
-    padding: 10px 20px;
-  }
-  .nav-bar .nav-mid {
-    position: absolute;
-    top: calc(100% + 5px);
-    right: 5px;
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    align-items: flex-end;
-    padding: 1rem;
-    padding-left: 5rem;
-    border-radius: 0.5rem;
-    background-color: #00000f;
-    box-shadow: 0 0 10px -2px rgba(255, 255, 255, 0.1);
-    transition: all 0.1s;
-    transform: scale(0);
-    transform-origin: top right;
-  }
-  .nav-bar .active {
-    transform: scale(1);
-  }
-  .nav-bar .nav-right .mobile-menu {
-    display: flex;
-  }
-  .nav-bar .nav-right .mobile-menu svg {
-    width: 30px;
-    height: 30px;
   }
   .head {
     flex-direction: column;
@@ -417,29 +419,6 @@ body {
   .classes .class-grid .class .content img {
     width: 100%;
   }
-  .footer {
-    width: 100%;
-    padding: 0 10px;
-  }
-  .footer-top {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .footer-top .footer-link {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-  .footer-top .footer-link .footer-list {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .footer-bottom {
-    flex-direction: column;
-  }
 }
 @media screen and (min-width: 601px) and (max-width: 1000px) {
   body {
@@ -467,11 +446,5 @@ body {
   }
   .classes .class-grid .class {
     padding: 15px;
-  }
-  .footer {
-    width: 100%;
-  }
-  .footer .footer-link {
-    gap: 50px;
   }
 }/*# sourceMappingURL=style.css.map */

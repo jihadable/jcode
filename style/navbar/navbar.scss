@@ -15,10 +15,10 @@ $dark-green: #001c04;
     top: 0;
     left: 0;
     right: 0;
-    padding: 10px 0;
+    padding: 10px 7%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: $dark-blue;
     z-index: 99;
 
@@ -50,6 +50,10 @@ $dark-green: #001c04;
             color: $white;
             position: relative;
 
+            &.signin{
+                display: none;
+            }
+
             &::after{
                 content: "";
                 position: absolute;
@@ -78,16 +82,16 @@ $dark-green: #001c04;
         gap: 10px;
         color: $white;
 
-        span{
-            padding: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 2px;
-            cursor: pointer;
+        .signin{
+            padding: 5px 10px;
+            border: 2px solid #00880c;
+            border-radius: 5px;
+            color: $white;
+            transition: all .2s;
+            text-decoration: none;
 
             &:hover{
-                background-color: rgb(255,255,255,.1);
+                background-color: #00880c;
             }
         }
 
@@ -101,7 +105,7 @@ $dark-green: #001c04;
 
     .nav-bar{
         justify-content: space-between;
-        padding: 10px 20px;
+        padding: 10px 5%;
 
         .nav-mid{
             position: absolute;
@@ -119,6 +123,10 @@ $dark-green: #001c04;
             transition: all .1s;
             transform: scale(0);
             transform-origin: top right;
+
+            a.signin{
+                display: block;
+            }
         }
 
         .active{
@@ -126,6 +134,11 @@ $dark-green: #001c04;
         }
 
         .nav-right{
+
+            .signin{
+                display: none;
+            }
+
             .mobile-menu{
                 display: flex;
             }
