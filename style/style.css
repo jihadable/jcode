@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 @import "./navbar/navbar.css";
+@import "./footer/footer.css";
 * {
   margin: 0;
   padding: 0;
@@ -146,6 +147,65 @@ body {
   width: 100%;
 }
 
+.faqs {
+  width: 80vw;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #eee;
+  gap: 2rem;
+}
+.faqs-header {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.faqs-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.faqs-content .item {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 0.5rem;
+}
+.faqs-content .item-header {
+  padding: 1rem 1rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.faqs-content .item-header span {
+  color: white;
+}
+.faqs-content .item-header svg {
+  color: #5d7ef3;
+  transition: all 0.2s;
+}
+.faqs-content .item-header svg.active {
+  transform: rotate(-180deg);
+}
+.faqs-content .item-content {
+  display: flex;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.2s cubic-bezier(0, 1, 0, 1);
+}
+.faqs-content .item-content.active {
+  max-height: 99rem;
+  transition: 0.2s cubic-bezier(1, 0, 1, 0);
+}
+.faqs-content .item-content .answer {
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .principles {
   display: flex;
   flex-direction: column;
@@ -259,131 +319,6 @@ body {
   color: #1da1f2;
 }
 
-.footer {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(93, 126, 243, 0.2);
-  color: #eee;
-}
-.footer-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  padding: 30px 0;
-}
-.footer-top .top-left {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.footer-top .top-left .header {
-  display: flex;
-  align-items: baseline;
-}
-.footer-top .top-left .header span:first-child {
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: white;
-}
-.footer-top .top-left .header span:last-child {
-  font-size: 1.5rem;
-  color: #00880c;
-  font-family: "Courier Prime", monospace;
-}
-.footer-top .top-left .medsos {
-  display: flex;
-  justify-content: flex-start;
-  gap: 10px;
-}
-.footer-top .top-left .medsos a {
-  padding: 5px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: all 0.5s;
-  color: #eee;
-}
-.footer-top .top-left .medsos .twt:hover {
-  background-color: #1da1f2;
-}
-.footer-top .top-left .medsos .ln:hover {
-  background-color: #0077b5;
-}
-.footer-top .top-left .medsos .yt:hover {
-  background-color: #cd201f;
-}
-.footer-top .footer-link {
-  display: flex;
-  gap: 100px;
-}
-.footer-top .footer-link .footer-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.footer-top .footer-link .footer-list li a {
-  text-decoration: none;
-  color: #eee;
-}
-.footer-top .footer-link .footer-list li a:hover {
-  text-decoration: underline;
-}
-.footer-bottom {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  border-top: 1px solid #bbb;
-  padding: 20px 0;
-}
-.footer-bottom span {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.footer-bottom span svg {
-  color: red;
-}
-
-@media screen and (max-width: 600px) {
-  .footer {
-    width: 100%;
-    padding: 0 10px;
-  }
-  .footer-top {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .footer-top .footer-link {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-  .footer-top .footer-link .footer-list {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .footer-bottom {
-    flex-direction: column;
-  }
-}
-@media screen and (min-width: 601px) and (max-width: 1000px) {
-  .footer {
-    width: 100%;
-  }
-  .footer .footer-link {
-    gap: 50px;
-  }
-}
 @media screen and (max-width: 480px) {
   body {
     display: flex;
@@ -443,6 +378,13 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  .faqs {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .faqs-content .item-header span {
+    width: 85%;
+  }
   .classes {
     width: 95vw;
   }
@@ -495,11 +437,17 @@ body {
     gap: 1rem;
   }
   .principles {
-    width: 95vw;
+    width: 90vw;
     gap: 15px;
   }
+  .principles-content {
+    gap: 1rem;
+  }
+  .faqs {
+    width: 90vw;
+  }
   .classes {
-    width: 95vw;
+    width: 90vw;
   }
   .classes .class-grid {
     width: 100%;

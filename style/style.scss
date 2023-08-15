@@ -176,6 +176,75 @@ body{
     }
 }
 
+.faqs{
+    width: 80vw;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $white;
+    gap: 2rem;
+
+    &-header{
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &-content{
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        .item{
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(255,255,255,.07);
+            border-radius: .5rem;
+
+            &-header{
+                padding: 1rem 1rem;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+
+                span{
+                    color: white;
+                }
+
+                svg{
+                    color: $blue;
+                    transition: all .2s;
+
+                    &.active{
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+
+            &-content{
+                display: flex;
+                max-height: 0;
+                overflow: hidden;
+                transition: .2s cubic-bezier(0,1,0,1);
+
+                &.active{
+                    max-height: 99rem;
+                    transition: .2s cubic-bezier(1,0,1,0);
+                }
+
+                .answer{
+                    padding: 1rem;
+                    font-size: .9rem;
+                    color: rgb(255,255,255,.5);
+                }
+            }
+        }
+    }
+}
+
 .principles{
     display: flex;
     flex-direction: column;
@@ -232,8 +301,7 @@ body{
                 color: $white;
             }
         }
-    }
-    
+    }   
 }
 
 .classes{
@@ -306,7 +374,7 @@ body{
     }
 }
 
-@import "./footer/footer.scss";
+@import "./footer/footer.css";
 
 @media screen and (max-width: 480px) {
 
@@ -385,6 +453,21 @@ body{
         &-content{
             flex-direction: column;
             align-items: center;
+        }
+    }
+
+    .faqs{
+        width: 100%;
+        padding: 0 1rem;
+
+        &-content{
+            .item{
+                &-header{
+                    span{
+                        width: 85%;
+                    }
+                }
+            }
         }
     }
 
@@ -468,12 +551,20 @@ body{
     }
 
     .principles{
-        width: 95vw;
+        width: 90vw;
         gap: 15px;
+
+        &-content{
+            gap: 1rem;
+        }
+    }
+
+    .faqs{
+        width: 90vw;
     }
 
     .classes{
-        width: 95vw;
+        width: 90vw;
 
         .class-grid{
             width: 100%;

@@ -1,5 +1,15 @@
 const out = console.log.bind(document)
 
+// open faqs item
+const faqsHeader = document.querySelectorAll(".faqs-content .item .item-header")
+
+faqsHeader.forEach(function(btn){
+    btn.addEventListener("click", function(){
+        btn.querySelector("svg").classList.toggle("active")
+        btn.nextElementSibling.classList.toggle("active")
+    })
+})
+
 // humberger click
 const navMid = document.querySelector(".nav-mid")
 const menuMObile = document.querySelector(".mobile-menu")

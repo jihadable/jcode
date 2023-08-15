@@ -100,19 +100,9 @@ $darkBlue: #00000f;
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
         border-top: 1px solid #bbb;
         padding: 20px 0;
-
-        span{
-            display: flex;
-            align-items: center;
-            gap: 5px;
-
-            svg{
-                color: red;
-            }
-        }
     }
 }
 

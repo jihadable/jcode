@@ -77,17 +77,9 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   border-top: 1px solid #bbb;
   padding: 20px 0;
-}
-.footer-bottom span {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.footer-bottom span svg {
-  color: red;
 }
 
 @media screen and (max-width: 600px) {
