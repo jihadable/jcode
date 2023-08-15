@@ -84,8 +84,8 @@ body {
   text-align: center;
   padding: 0.8rem;
   border-radius: 0.8rem;
-  background-color: rgba(255, 255, 255, 0.02);
-  border: 2px solid rgba(255, 255, 255, 0.01);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.07);
 }
 
 .elearning {
@@ -100,7 +100,7 @@ body {
   width: 100%;
   border-radius: 0.8rem;
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.02);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 .elearning-item:nth-child(2) {
   flex-direction: row-reverse;
@@ -169,11 +169,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.02);
-  border: 2px solid rgba(255, 255, 255, 0.01);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.07);
   padding: 20px;
   border-radius: 2rem 0 2rem 0;
-  cursor: pointer;
   transition: all 0.1s;
 }
 .principles-content .principles-item .item-top {
@@ -183,8 +182,8 @@ body {
 }
 .principles-content .principles-item .item-top svg {
   margin: auto;
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   color: #5d7ef3;
 }
 .principles-content .principles-item .principles-header {
@@ -228,8 +227,8 @@ body {
   gap: 10px;
   cursor: pointer;
   transition: all 0.2s;
-  background-color: rgba(255, 255, 255, 0.02);
-  border: 2px solid rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.07);
 }
 .classes .class-grid .class .header {
   font-size: 1.1rem;
@@ -475,7 +474,25 @@ body {
   .head {
     flex-direction: column;
     justify-content: center;
-    gap: 50px;
+    gap: 8rem;
+  }
+  .head .items .row img {
+    width: 3rem;
+  }
+  .career {
+    width: 90vw;
+  }
+  .career-content {
+    gap: 1rem;
+  }
+  .career-content .item-img img {
+    width: 5rem;
+  }
+  .elearning {
+    width: 90vw;
+  }
+  .elearning-item .content {
+    gap: 1rem;
   }
   .principles {
     width: 95vw;

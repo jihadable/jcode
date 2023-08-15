@@ -79,7 +79,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 50%;
-  background-color: rgba(255, 255, 255, 0.01);
+  background-color: rgba(255, 255, 255, 0.04);
 }
 .target-history .target-left svg, .target-history .history-left svg {
   width: 5rem;

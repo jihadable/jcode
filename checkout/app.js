@@ -14,13 +14,12 @@ classes.forEach(function(course,i){
     course.addEventListener("click",function(){
         let name = course.children[0].innerHTML
         let month = selectMonths.value
-        let price = course.getAttribute(`data-price-${month}`)
+        price = parseInt(course.getAttribute(`data-price-${month}`))
         let img = course.children[1].children[0].src
 
         imgClass.src = img
         courseName.innerHTML = name
-        coursePrice.innerHTML = `$${price}`
-        totalPrice.innerHTML = coursePrice.innerHTML
+        handleTotalPrice(price, discount)
 
         index = i
 
@@ -32,55 +31,39 @@ classes.forEach(function(course,i){
 selectMonths.addEventListener("change",function(){
     let value = selectMonths.value
     
-    let price = classes[index].getAttribute(`data-price-${value}`)
+    price = classes[index].getAttribute(`data-price-${value}`)
 
-    coursePrice.innerHTML = `$${price}`
-    totalPrice.innerHTML = coursePrice.innerHTML
+    handleTotalPrice(price, discount)
 })
 
-// dark to light function
-function darkToLight(){
-    
-    // body
-    document.body.style.backgroundColor = "#eee"
+// discount
+const discountInput = document.querySelector(".discount-input")
+const discountCheckBtn = document.querySelector(".discount-check")
+const discountValue = document.querySelector(".discount-value")
 
-    // logo
-    document.querySelectorAll(".j-logo").forEach(function(el){
-        el.style.color = "black"
-    })
+let price = 45
+let discount = 0
 
-    // checkout background
-    document.querySelector(".checkout").style.backgroundColor = "#fff"
+discountCheckBtn.addEventListener("click", function(){
+    if (discountInput.value == "umar"){
+        discount = 25
+    }
+    else if (discountInput.value == "jihad"){
+        discount = 25
+    }
+    else if (discountInput.value == "umarjihad"){
+        discount = 50
+    }
 
-    // classes
-    document.querySelector(".classes").style.setProperty("--whiteRGB", "rgb(255,255,255,.3")
+    discountValue.innerHTML = `${discount}%`
 
-    document.querySelector(".classes-header").style.color = "black"
+    handleTotalPrice(price, discount)
+})
 
-    document.querySelectorAll(".class .header").forEach(function(el){
-        el.style.color = "black"
-    })
-
-    document.querySelectorAll(".class").forEach(function(el){
-        el.style.setProperty("--white", "#fff")
-    })
-
-    document.querySelectorAll(".class-info-item").forEach(function(el){
-        el.style.color = "black"
-    })
-
-    // footer
-    document.querySelector(".footer").style.backgroundColor = "#ddd"
-    document.querySelector(".footer").style.color = "black"
-
-    document.querySelector(".medsos").style.setProperty("--black", "black")
-
-    document.querySelectorAll(".footer-link").forEach(function(el){
-        el.style.setProperty("--black", "black")
-    })
-
-    // add to localstorage
-    localStorage.setItem("onmode", "light")
+// change total price according to discount
+function handleTotalPrice(price, discount){
+    coursePrice.innerHTML = `$${price}`
+    totalPrice.innerHTML = `$${Math.round(price - price*(discount/100))}`
 }
 
 // responsive footer

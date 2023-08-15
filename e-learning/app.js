@@ -18,7 +18,7 @@ const pahtImg = document.querySelector(".path-img")
 
 pathItem[0].style.border = "2px solid rgba(255, 255, 255, .5)"
 
-let borderLight = "rgba(255, 255, 255, .03)"
+let borderLight = "rgba(255, 255, 255, .07)"
 
 let pathIndex = 1
 setInterval(() => {

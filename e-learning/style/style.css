@@ -110,8 +110,8 @@ body {
 .path-left .path-item {
   border-radius: 20px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.02);
-  border: 2px solid rgba(255, 255, 255, 0.03);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.07);
 }
 .path-left .path-item-header {
   font-size: 20px;
