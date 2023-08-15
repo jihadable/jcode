@@ -25,6 +25,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  transform: rotate(-45deg);
 }
 .head .items .row {
   display: flex;
@@ -33,7 +34,8 @@ body {
   gap: 15px;
 }
 .head .items .row img {
-  width: 55px;
+  width: 2.5rem;
+  transform: rotate(45deg);
 }
 .head .info {
   display: flex;
@@ -56,51 +58,72 @@ body {
   text-align: center;
 }
 
-.benefit {
+.career {
+  width: 80vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 30px;
-  padding: 50px;
+  margin: auto;
+  color: #eee;
 }
-.benefit-header {
+.career-header {
   font-size: 30px;
-  font-weight: 700;
-  color: #eee;
+  font-weight: bold;
 }
-.benefit .problems {
+.career-content {
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+}
+.career-content .item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-  border-radius: 5px;
-  padding: 30px;
-  color: #eee;
+  gap: 0.5rem;
+  text-align: center;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 2px solid rgba(255, 255, 255, 0.01);
 }
-.benefit .problems-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-}
-.benefit .problems-content .left img {
-  width: 400px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px -2px #000;
-}
-.benefit .problems-content .right {
+
+.elearning {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  font-size: 1.3rem;
+  gap: 6rem;
+  margin: 5rem auto;
+  width: 80vw;
 }
-.benefit .problems-content .right a {
-  text-decoration: none;
+.elearning-item {
+  display: flex;
+  width: 100%;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+.elearning-item:nth-child(2) {
+  flex-direction: row-reverse;
+}
+.elearning-item .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 60%;
+  padding: 1rem;
   color: #eee;
 }
-.benefit .problems .join-now {
+.elearning-item .content .header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00880c;
+}
+.elearning-item .content .text {
+  font-size: 0.8rem;
+}
+.elearning-item .content .join-now {
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 5px 10px;
   border: 2px solid #00880c;
   color: #eee;
@@ -111,9 +134,16 @@ body {
   align-items: center;
   gap: 2px;
 }
-.benefit .problems .join-now:hover {
+.elearning-item .content .join-now:hover {
   background-color: #00880c;
   color: #eee;
+}
+.elearning-item .img {
+  display: flex;
+  width: 40%;
+}
+.elearning-item .img img {
+  width: 100%;
 }
 
 .principles {
@@ -121,9 +151,8 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  width: 75vw;
-  margin: auto;
-  margin-top: 70px;
+  width: 80vw;
+  margin: 5rem auto;
 }
 .principles-head {
   font-weight: 700;
@@ -133,17 +162,17 @@ body {
 .principles-content {
   display: flex;
   width: 100%;
-  justify-content: center;
-  gap: 30px;
+  justify-content: space-between;
+  gap: 1.5rem;
 }
 .principles-content .principles-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(93, 126, 243, 0.2);
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 2px solid rgba(255, 255, 255, 0.01);
   padding: 20px;
   border-radius: 2rem 0 2rem 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   transition: all 0.1s;
 }
@@ -156,7 +185,7 @@ body {
   margin: auto;
   width: 3rem;
   height: 3rem;
-  color: #00880c;
+  color: #5d7ef3;
 }
 .principles-content .principles-item .principles-header {
   font-size: 1.2rem;
@@ -166,14 +195,16 @@ body {
 .principles-content .principles-item .principles-content {
   text-align: center;
   font-size: 0.85rem;
+  margin-top: 2rem;
   color: #eee;
 }
 
 .classes {
+  width: 80vw;
+  margin: 5rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 0;
   gap: 40px;
 }
 .classes-header {
@@ -185,7 +216,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 20px;
+  gap: 1rem;
 }
 .classes .class-grid .class {
   position: relative;
@@ -197,16 +228,19 @@ body {
   gap: 10px;
   cursor: pointer;
   transition: all 0.2s;
-  background-color: rgba(0, 0, 0, 0.3);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 2px solid rgba(255, 255, 255, 0.05);
 }
 .classes .class-grid .class .header {
   font-size: 1.1rem;
   color: #eee;
+  text-align: center;
+}
+.classes .class-grid .class .content {
+  display: flex;
 }
 .classes .class-grid .class .content img {
-  width: 210px;
+  width: 100%;
   border-radius: 10px;
   margin-bottom: -5px;
 }
@@ -351,7 +385,7 @@ body {
     gap: 50px;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
   body {
     display: flex;
     flex-direction: column;
@@ -360,34 +394,46 @@ body {
   .head {
     flex-direction: column;
     justify-content: center;
-    gap: 30px;
+    gap: 5rem;
+  }
+  .head .items .row img {
+    width: 2rem;
   }
   .head .info {
     width: 90vw;
   }
-  .benefit {
-    width: 90vw;
-    margin-top: 0;
-    padding: 0;
-  }
-  .benefit .problems {
-    padding: 0;
-    background: none;
-    align-items: center;
-  }
-  .benefit .problems::after {
-    display: none;
-  }
-  .benefit .problems-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  .benefit .problems-content .left img {
+  .career {
     width: 100%;
+    padding: 0 1rem;
   }
-  .benefit .problems-content .right {
-    padding: 0 15px;
+  .career-header {
+    text-align: center;
+  }
+  .career-content {
+    flex-direction: column;
+  }
+  .elearning {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .elearning-item {
+    flex-direction: column-reverse;
+  }
+  .elearning-item:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+  .elearning-item .content {
+    width: 100%;
+    align-items: center;
+  }
+  .elearning-item .content .header {
+    text-align: center;
+  }
+  .elearning-item .content .text {
+    text-align: justify;
+  }
+  .elearning-item .img {
+    width: 100%;
   }
   .principles {
     flex-direction: column;
@@ -420,7 +466,7 @@ body {
     width: 100%;
   }
 }
-@media screen and (min-width: 601px) and (max-width: 1000px) {
+@media screen and (min-width: 481px) and (max-width: 1023px) {
   body {
     display: flex;
     flex-direction: column;

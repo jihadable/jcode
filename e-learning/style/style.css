@@ -110,15 +110,17 @@ body {
 .path-left .path-item {
   border-radius: 20px;
   padding: 20px;
-  background-color: #fff;
-  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 2px solid rgba(255, 255, 255, 0.03);
 }
 .path-left .path-item-header {
   font-size: 20px;
   font-weight: 700;
+  color: #5d7ef3;
 }
 .path-left .path-item p {
   font-size: 0.9rem;
+  color: #eee;
 }
 .path-right {
   position: relative;
@@ -193,6 +195,9 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.subscribe-grid .subscribe-item .benefits-item span.material-symbols-outlined {
+  color: #5d7ef3;
 }
 .subscribe-grid .subscribe-item .join-button {
   width: 100%;

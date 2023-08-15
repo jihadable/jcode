@@ -126,16 +126,18 @@ body{
         .path-item{
             border-radius: 20px;
             padding: 20px;
-            background-color: #fff;
-            border: 1px solid white;
+            background-color: rgb(255,255,255,.02);
+            border: 2px solid rgb(255,255,255,.03);
 
             &-header{
                 font-size: 20px;
                 font-weight: 700;
+                color: $blue;
             }
 
             p{
                 font-size: .9rem;
+                color: $white;
             }
         }
     }
@@ -219,6 +221,10 @@ body{
                         display: flex;
                         align-items: center;
                         gap: 10px;
+                        
+                        &.material-symbols-outlined{
+                            color: $blue;
+                        }
                     }
                 }
             }

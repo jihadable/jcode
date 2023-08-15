@@ -16,9 +16,9 @@ setInterval(() => {
 const pathItem = document.querySelectorAll(".path-item")
 const pahtImg = document.querySelector(".path-img")
 
-pathItem[0].style.border = "2px solid rgba(93, 126, 243, .7)"
+pathItem[0].style.border = "2px solid rgba(255, 255, 255, .5)"
 
-let borderLight = "#fff"
+let borderLight = "rgba(255, 255, 255, .03)"
 
 let pathIndex = 1
 setInterval(() => {
@@ -27,7 +27,7 @@ setInterval(() => {
         pathIndex = 1
     }
 
-    pathItem[pathIndex - 1].style.border = "2px solid rgba(93, 126, 243, .7)"
+    pathItem[pathIndex - 1].style.border = "2px solid rgba(255, 255, 255, .5)"
 
     for (let i = 0 ; i < 4 ; i++){
         if (i != pathIndex - 1){

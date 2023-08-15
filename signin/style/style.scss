@@ -18,7 +18,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: $darkBlue;
 }
 
@@ -104,7 +104,6 @@ body{
             outline: none;
             border-radius: 5px;
             padding: 8px;
-            font-size: .9rem;
             color: black;
         }
     }
@@ -124,6 +123,7 @@ body{
         }
 
         button{
+            font-size: 1rem;
             border-radius: 5px;
             padding: 8px;
             border: none;
@@ -131,6 +131,22 @@ body{
             cursor: pointer;
             background-color: $green;
             color: $white;
+        }
+    }
+
+    .google{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+        border-radius: .5rem;
+        padding: 0.5rem;
+        background-color: #fff;
+        cursor: pointer;
+
+        img{
+            width: 2rem;
         }
     }
 

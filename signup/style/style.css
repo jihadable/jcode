@@ -11,7 +11,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #00000f;
 }
 
@@ -87,7 +87,7 @@ body {
   outline: none;
   border-radius: 5px;
   padding: 8px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: black;
 }
 .form .bottom {
@@ -110,6 +110,21 @@ body {
   cursor: pointer;
   background-color: #00880c;
   color: #eee;
+  font-size: 1rem;
+}
+.form .google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+.form .google img {
+  width: 2rem;
 }
 .form .already {
   margin: auto;
