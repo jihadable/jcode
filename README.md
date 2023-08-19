@@ -1,6 +1,6 @@
 # Jcode 🧑‍💻
 
-Jcode is a online course platform for programmer and help them to get their dream job.
+Jcode is an online course platform for learning programming. This website showcases a landing page, the classes taught at Jcode, and the learning system within Jcode.
 
 👉 [Live Demo](https://jcode-2110.netlify.app/)
 
