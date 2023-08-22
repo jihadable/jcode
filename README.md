@@ -1,5 +1,12 @@
-## Jcode
+# Jcode 🧑‍💻
 
-Jcode adalah platform online berbasis website yang menyediakan kursus untuk menjadi seorang programmer.
+Jcode is an online course platform for learning programming. This website showcases a landing page, the classes taught at Jcode, and the learning system within Jcode.
 
-Tech stack: SASS dan Vanilla JS.
+👉 [Live Demo](https://jcode-2110.netlify.app/)
+
+## Tech Stack
+» SASS
+<br/>
+» VanillaJS
+
+<img src="https://umarjihad.netlify.app/pic/jcode.png" />
