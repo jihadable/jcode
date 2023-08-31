@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Poppins:wght@400;600;700&display=swap');
 
 $green: #00880c;
 $green_gradation: rgb(0, 136, 12);
@@ -176,6 +176,279 @@ body{
     }
 }
 
+.playground{
+    width: 80vw;
+    margin: 5rem auto;
+    display: flex;
+    color: $white;
+
+    .code{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(255,255,255,.05);
+        border-radius: .5rem;
+        overflow: hidden;
+
+        &-header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem;
+            border-bottom: 2px solid $dark-blue;
+
+            .left{
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .languages-run{
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+
+                .run-btn{
+                    display: flex;
+                    border-radius: .2rem;
+                    border: 2px solid $green;
+                    cursor: pointer;
+                    padding: 0.2rem;
+                    transition: all .2s;
+
+                    &:hover{
+                        background-color: $green;
+                    }
+                }
+
+                .languages{
+                    display: flex;
+                    position: relative;
+    
+                    &-header{
+                        display: flex;
+                        align-items: center;
+                        gap: 0.2rem;
+                        background-color: rgb(255,255,255,.05);
+                        padding: 0.2rem .5rem;
+                        cursor: pointer;
+                        border-radius: .2rem;
+                    }
+    
+                    &-menu{
+                        position: absolute;
+                        z-index: 1;
+                        top: 110%;
+                        right: 0;
+                        background-color: $white;
+                        color: black;
+                        backdrop-filter: blur(10px);
+                        border-radius: .2rem;
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: all .2s;
+    
+                        &.active{
+                            max-height: 999px;
+                        }
+    
+                        .language{
+                            padding: 0.2rem .5rem;
+                            cursor: pointer;
+    
+                            &:hover{
+                                background-color: rgb(0,0,0,.15);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-container{
+            display: flex;
+            width: 100%;
+            height: fit-content;
+            position: relative;
+            
+            .code-content{
+                width: 100%;
+                display: flex;
+                padding: 0.5rem;
+                color: rgb(255,255,255,.8);
+                
+                .lines{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    color: rgb(255,255,255,.3);
+                    margin-right: 1rem;
+    
+                    div{
+                        font-size: 1rem;
+                        font-family: monospace;
+                    }
+                }
+                
+                pre{
+                    font-size: 1rem;
+                    font-family: monospace;
+    
+                    *{
+                        font-size: 1rem;
+                        font-family: monospace;
+                    }
+    
+                    .purple{
+                        color: #c678dd;
+                    }
+    
+                    .blue{
+                        color: #61afef;
+                    }
+    
+                    .fontainBlue{
+                        color: #56b6cd;
+                    }
+    
+                    .yellow{
+                        color: #e5c07b;
+                    }
+    
+                    .orange{
+                        color: #d19a66;
+                    }
+    
+                    .red{
+                        color: #be5046;
+                    }
+                }
+    
+                .terminal{
+                    position: absolute;
+                    right: -100%;
+                    width: 30%;
+                    background-color: black;
+                    top: 0;
+                    bottom: 0;
+                    padding: 0.5rem;
+                    display: flex;
+                    justify-content: space-between;
+                    transition: all .5s;
+    
+                    &.active{
+                        right: 0;
+                    }
+    
+                    *{
+                        font-size: 1rem;
+                        font-family: monospace;
+                    }
+    
+                    &-info{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.5rem;
+                    }
+    
+                    .close{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        padding: 0.1rem;
+                        border-radius: 10rem;
+                        height: fit-content;
+                        width: fit-content;
+                        
+                        &:hover{
+                            background-color: rgb(255,255,255,.05);
+                        }
+                    }
+                }
+    
+                .run-btn{
+                    position: absolute;
+                    bottom: .5rem;
+                    right: .5rem;
+                    height: fit-content;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.2rem;
+                    padding: 0.2rem;
+                    padding-right: .4rem;
+                    border-radius: .2rem;
+                    background-color: $green;
+                    cursor: pointer;
+    
+                    span{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.principles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 80vw;
+    margin: 5rem auto;
+    
+    &-head{
+        font-weight: 700;
+        font-size: 30px;
+        color: $white;
+    }
+
+    &-content{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: 1.5rem;
+
+        .principles-item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(255,255,255,.05);
+            border: 2px solid rgb(255,255,255,.07);
+            padding: 20px;
+            border-radius: 2rem 0 2rem 0;
+            transition: all .1s;
+    
+            .item-top{
+                padding: 10px;
+                border-radius: 50%;
+                display: flex;
+    
+                svg{
+                    margin: auto;
+                    width: 4rem;
+                    height: 4rem;
+                    color: $blue;
+                }
+            }
+            
+            .principles-header{
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: $white;
+            }
+            
+            .principles-content{
+                text-align: center;
+                font-size: .85rem;
+                margin-top: 2rem;
+                color: $white;
+            }
+        }
+    }   
+}
+
 .faqs{
     width: 80vw;
     margin: 5rem auto;
@@ -243,65 +516,6 @@ body{
             }
         }
     }
-}
-
-.principles{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    width: 80vw;
-    margin: 5rem auto;
-    
-    &-head{
-        font-weight: 700;
-        font-size: 30px;
-        color: $white;
-    }
-
-    &-content{
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        gap: 1.5rem;
-
-        .principles-item{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: rgb(255,255,255,.05);
-            border: 2px solid rgb(255,255,255,.07);
-            padding: 20px;
-            border-radius: 2rem 0 2rem 0;
-            transition: all .1s;
-    
-            .item-top{
-                padding: 10px;
-                border-radius: 50%;
-                display: flex;
-    
-                svg{
-                    margin: auto;
-                    width: 4rem;
-                    height: 4rem;
-                    color: $blue;
-                }
-            }
-            
-            .principles-header{
-                font-size: 1.2rem;
-                font-weight: bold;
-                color: $white;
-            }
-            
-            .principles-content{
-                text-align: center;
-                font-size: .85rem;
-                margin-top: 2rem;
-                color: $white;
-            }
-        }
-    }   
 }
 
 .classes{
@@ -445,10 +659,45 @@ body{
         }
     }
 
+    .playground{
+        width: 100%;
+        padding: 0 1rem;
+
+        .code{
+            &-container{
+                width: calc(100vw - 2rem);
+                height: fit-content;
+                overflow-x: auto;
+                overflow-y: hidden;
+
+                .code-content{
+                    width: fit-content;
+                    height: fit-content;
+                    // position: relative;
+
+                    .terminal{
+                        width: 100%;
+                        height: 1000px;
+                        top: 100%;
+                        bottom: auto;
+                        left: 0;
+                        right: 0;
+
+                        &.active{
+                            top: 30%;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
     .principles{
         flex-direction: column;
         align-items: center;
-        width: 90vw;
+        width: 100;
+        padding: 0 1rem;
 
         &-content{
             flex-direction: column;
@@ -548,6 +797,10 @@ body{
                 gap: 1rem;
             }
         }
+    }
+
+    .playground{
+        width: 90vw;
     }
 
     .principles{
