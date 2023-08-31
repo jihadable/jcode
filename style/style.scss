@@ -267,8 +267,6 @@ body{
 
         &-container{
             display: flex;
-            width: fit-content;
-            height: fit-content;
             position: relative;
             
             .code-content{
@@ -364,25 +362,6 @@ body{
                         &:hover{
                             background-color: rgb(255,255,255,.05);
                         }
-                    }
-                }
-    
-                .run-btn{
-                    position: absolute;
-                    bottom: .5rem;
-                    right: .5rem;
-                    height: fit-content;
-                    display: flex;
-                    align-items: center;
-                    gap: 0.2rem;
-                    padding: 0.2rem;
-                    padding-right: .4rem;
-                    border-radius: .2rem;
-                    background-color: $green;
-                    cursor: pointer;
-    
-                    span{
-                        color: black;
                     }
                 }
             }
@@ -666,9 +645,12 @@ body{
         .code{
             &-container{
                 width: calc(100vw - 2rem);
-                height: fit-content;
                 overflow-x: auto;
                 overflow-y: hidden;
+
+                &.closeScroll {
+                    overflow-x: hidden;
+                }
 
                 .code-content{
                     width: fit-content;

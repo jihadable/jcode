@@ -6,6 +6,7 @@ const languageValue = document.querySelector(".languages-header span")
 // out(languageValue)
 const languages = document.querySelectorAll(".language")
 const lines = document.querySelector(".lines")
+const codeContainer = document.querySelector(".code-container")
 const code = document.querySelector(".syntaks")
 
 const programs = {
@@ -70,6 +71,9 @@ setLines(programs["java"])
 // open languages menu
 languageHeader.addEventListener("click", function(){
     languageHeader.nextElementSibling.classList.toggle("active")
+    terminal.classList.remove("active")
+
+    codeContainer.classList.remove("closeScroll")
 })
 
 // close languages menu
@@ -77,8 +81,6 @@ languageHeader.addEventListener("click", function(){
 languages.forEach(function(language){
     language.addEventListener("click", function(){
         terminal.classList.remove("active")
-
-        document.querySelector(".code-container").style.overflowX = "auto"
 
         languageValue.innerText = language.innerText
 
@@ -108,9 +110,11 @@ const closeTerminalBtn = document.querySelector(".terminal .close")
 
 runBtn.addEventListener("click", function(){
 
-    document.querySelector(".code-container").style.overflowX = "hidden"
-
     terminal.classList.add("active")
+
+    codeContainer.classList.add("closeScroll")
+
+    codeContainer.scrollLeft = 0
 
     let extension;
     if (languageValue.innerText == "Java"){
@@ -129,7 +133,7 @@ runBtn.addEventListener("click", function(){
 closeTerminalBtn.addEventListener("click", function(){
     terminal.classList.remove("active")
 
-    document.querySelector(".code-container").style.overflowX = "auto"
+    codeContainer.classList.remove("closeScroll")
 })
 
 // open faqs item

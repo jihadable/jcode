@@ -228,10 +228,6 @@ body {
 }
 .playground .code-container {
   display: flex;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   position: relative;
 }
 .playground .code-container .code-content {
@@ -315,24 +311,6 @@ body {
 }
 .playground .code-container .code-content .terminal .close:hover {
   background-color: rgba(255, 255, 255, 0.05);
-}
-.playground .code-container .code-content .run-btn {
-  position: absolute;
-  bottom: 0.5rem;
-  right: 0.5rem;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
-  padding: 0.2rem;
-  padding-right: 0.4rem;
-  border-radius: 0.2rem;
-  background-color: #00880c;
-  cursor: pointer;
-}
-.playground .code-container .code-content .run-btn span {
-  color: black;
 }
 
 .principles {
@@ -563,10 +541,11 @@ body {
   }
   .playground .code-container {
     width: calc(100vw - 2rem);
-    height: -moz-fit-content;
-    height: fit-content;
     overflow-x: auto;
     overflow-y: hidden;
+  }
+  .playground .code-container.closeScroll {
+    overflow-x: hidden;
   }
   .playground .code-container .code-content {
     width: -moz-fit-content;
