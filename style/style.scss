@@ -267,7 +267,7 @@ body{
 
         &-container{
             display: flex;
-            width: 100%;
+            width: fit-content;
             height: fit-content;
             position: relative;
             
@@ -673,7 +673,6 @@ body{
                 .code-content{
                     width: fit-content;
                     height: fit-content;
-                    // position: relative;
 
                     .terminal{
                         width: 100%;

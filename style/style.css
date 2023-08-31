@@ -228,7 +228,8 @@ body {
 }
 .playground .code-container {
   display: flex;
-  width: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
   position: relative;
