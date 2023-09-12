@@ -1,6 +1,6 @@
 @import url("./index.css");
 
-.nav-bar{
+.navbar{
     position: fixed;
     top: 0;
     left: 0;
@@ -11,7 +11,7 @@
     justify-content: space-between;
     background-color: rgb(0,0,15,.8);
     backdrop-filter: blur(20px);
-    z-index: 99;
+    z-index: 10;
 
     .logo{
         display: flex;
@@ -25,6 +25,18 @@
         display: flex;
         align-items: center;
         gap: 50px;
+
+        .close-navbar{
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 0.2rem;
+            border-radius: .2rem;
+
+            &:hover{
+                background-color: rgb(255,255,255,.05);
+            }
+        }
 
         & a{
             text-decoration: none;
@@ -78,57 +90,80 @@
 
         .mobile-menu{
             display: none;
+            padding: 0.2rem;
+            border-radius: .2rem;
+
+            &:hover{
+                background-color: rgb(255,255,255,.05);
+            }
         }
     }
 }
 
+.overlay{
+    display: none;
+}
+
 @media screen and (max-width: 480px) {
 
-    .nav-bar{
+    .navbar{
         justify-content: space-between;
-        padding: 10px 5%;
+        padding: 1rem;
 
         .links{
-            position: absolute;
-            top: calc(100% + 5px);
-            right: 5px;
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-            align-items: flex-end;
-            padding: 1rem;
-            padding-left: 5rem;
-            border-radius: .5rem;
+            position: fixed;
             background-color: var(--dark-blue);
-            box-shadow: 0 0 10px -2px rgb(255,255,255,.1);
-            transition: all .1s;
-            transform: scale(0);
-            transform-origin: top right;
+            flex-direction: column;
+            align-items: end;
+            gap: 1rem;
+            padding: 1rem;
+            top: 0;
+            height: 100vh;
+            min-width: 60vw;
+            right: -100%;
+            transition: all .3s;
+            font-size: 1.2rem;
+
+            &.active{
+                right: 0;
+                z-index: 30;
+            }
+
+            .close-navbar{
+                display: flex;
+            }
 
             .signin{
                 display: block;
             }
         }
 
-        .active{
-            transform: scale(1);
-        }
-
         .extra{
-
             .signin{
                 display: none;
             }
 
             .mobile-menu{
                 display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
+    }
+
+    .overlay.active{
+        display: block;
+        position: fixed;
+        background-color: rgb(0,0,0,.5);
+        top: 0;
+        height: 100vh;
+        left: 0;
+        right: 0;
     }
 }
 
 @media screen and (min-width: 481px) and (max-width: 1023px) {
-    .nav-bar{
-        padding: .5rem 5vw;
+    .navbar{
+        padding: 1rem 5vw;
     }
 }
