@@ -6,6 +6,8 @@ import "../style/Class.css"
 
 export default function Class({ item }){
 
+    document.title = "Jcode | " + item.title 
+
     return (
         <>
         <Navbar page={"E-learning"} />

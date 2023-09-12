@@ -7,6 +7,9 @@ import Classes from "../components/Classes"
 import Pricing from "../components/Pricing"
 
 export default function ELearning(){
+
+    document.title = "Jcode | E-Learning"
+
     return (
         <>
         <Navbar page={"E-learning"} />
