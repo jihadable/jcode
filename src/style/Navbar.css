@@ -1,0 +1,134 @@
+@import url("./index.css");
+
+.nav-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: .5rem 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(0,0,15,.8);
+    backdrop-filter: blur(20px);
+    z-index: 99;
+
+    .logo{
+        display: flex;
+
+        & img{
+            height: 1.8rem;
+        }
+    }
+
+    .links{
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        & a{
+            text-decoration: none;
+            color: var(--white);
+            position: relative;
+
+            &.page::after{
+                width: 100%;
+            }
+
+            &.signin{
+                display: none;
+            }
+
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 2px;
+                background-color: #eee;
+                width: 0;
+                transition: all .2s;
+                border-radius: 5px;
+            }
+
+            &:hover::after{
+                width: 100%;
+            }
+        }
+    }
+
+    .extra{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--white);
+
+        .signin{
+            padding: 5px 10px;
+            border: 2px solid #00880c;
+            border-radius: 5px;
+            color: var(--white);
+            transition: all .2s;
+            text-decoration: none;
+
+            &:hover{
+                background-color: #00880c;
+            }
+        }
+
+        .mobile-menu{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .nav-bar{
+        justify-content: space-between;
+        padding: 10px 5%;
+
+        .links{
+            position: absolute;
+            top: calc(100% + 5px);
+            right: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            align-items: flex-end;
+            padding: 1rem;
+            padding-left: 5rem;
+            border-radius: .5rem;
+            background-color: var(--dark-blue);
+            box-shadow: 0 0 10px -2px rgb(255,255,255,.1);
+            transition: all .1s;
+            transform: scale(0);
+            transform-origin: top right;
+
+            .signin{
+                display: block;
+            }
+        }
+
+        .active{
+            transform: scale(1);
+        }
+
+        .extra{
+
+            .signin{
+                display: none;
+            }
+
+            .mobile-menu{
+                display: flex;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+    .nav-bar{
+        padding: .5rem 5vw;
+    }
+}

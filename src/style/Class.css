@@ -1,0 +1,119 @@
+@import url("./index.css");
+
+.class-detail{
+    width: 80vw;
+    margin: 5rem auto;
+    margin-top: 8rem;
+    display: flex;
+    gap: 1rem;
+
+    .img{
+        display: flex;
+
+        & img{
+            width: 30vw;
+            height: fit-content;
+            border-radius: .5rem;
+        }
+    }
+
+    .info{
+        width: 100%;
+        height: 30vw;
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem;
+        padding-left: 0;
+        gap: 1rem;
+        
+        .title{
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            align-self: center;
+        }
+        
+        .topics-list{
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            gap: 0.5rem;
+            padding-right: .5rem;
+        
+            &::-webkit-scrollbar{
+                background-color: rgb(255,255,255,.05);
+                width: .5rem;
+            }
+
+            &::-webkit-scrollbar-thumb{
+                background-color: rgb(255,255,255,.5);
+                border-radius: 5rem;
+            }
+
+            .topic{
+                border-radius: .2rem;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: .2rem;
+                color: rgb(255,255,255,.7);
+                font-size: .9rem;
+                cursor: pointer;
+                border-bottom: 1px solid transparent;
+
+                & svg{
+                    color: var(--green);
+                    height: fit-content;
+                    width: fit-content;
+                }
+                
+                & span{
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+
+                &:hover{
+                    background-color: rgb(255,255,255,.05);
+                    border-bottom: 1px solid var(--blue);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .class-detail{
+        width: 100%;
+        margin-top: 5rem;
+        padding: 0 1rem;
+        flex-direction: column;
+
+        .img{
+            & img{
+                width: 100%;
+            }
+        }
+
+        .info{
+            height: fit-content;
+            padding: 0;
+
+            .topics-list{
+                padding-right: 0;
+
+                .topic{
+                    & span{
+                        max-width: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+    .class-detail{
+        width: 90vw;
+    }
+}

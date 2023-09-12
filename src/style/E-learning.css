@@ -1,0 +1,418 @@
+@import url("./index.css");
+
+html{
+    scroll-behavior: smooth;
+}
+
+.e-learning-hero{
+    margin: auto;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .left{
+        position: relative;
+        width: 300px;
+
+        &::after{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            height: 300px;
+            background-color: rgb(0, 136, 12,.3);
+            z-index: -5;
+            border-radius: 30px;
+            transform: rotate(10deg);
+            animation: rotate 7s linear infinite;
+        }
+
+        & img{
+            width: 100%;
+            border-radius: 2.5rem;
+        }
+    }
+
+    .right{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 50vw;
+
+        .text{
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--white);
+
+            .unique{
+                background-color: gold;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .btns{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            
+            & a{
+                padding: 5px 10px;
+                border-radius: .3rem;
+                border: 2px solid var(--green);
+                width: fit-content;
+                color: var(--white);
+                text-decoration: none;
+                transition: all .2s;
+    
+                &:hover{
+                    background-color: var(--green);
+                }
+            }
+        }
+    }
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(10deg);
+    }
+    25%{
+        transform: rotate(35deg);
+    }
+    50%{
+        transform: rotate(20deg);
+    }
+    75%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(10deg);
+    }
+}
+
+.path{
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    .path-items{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 70%;
+
+        .item{
+            border-radius: .5rem;
+            padding: 1rem;
+            background-color: rgb(255,255,255,.05);
+            border-bottom: 1px solid var(--blue);
+
+            .title{
+                font-size: 20px;
+                font-weight: 700;
+                color: var(--blue);
+            }
+
+            .text{
+                font-size: .9rem;
+                color: rgb(255,255,255,.7);
+            }
+        }
+    }
+
+    .img{
+        position: relative;
+        width: 30%;
+
+        &::before{
+            content: "";
+            z-index: -1;
+            border-radius: 15px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(93, 126, 243, .2);
+            transform: rotate(-10deg);
+        }
+
+        & img{
+            width: 100%;
+            height: fit-content;
+            border-radius: 1rem;
+        }
+    }
+}
+
+.classes{
+    width: 80vw;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    color: var(--white);
+    
+    .title{
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: 1rem;
+        
+        .item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 1rem;
+            overflow: hidden;
+            background-color: rgb(255,255,255,.05);
+            border: 2px solid rgb(255,255,255,.07);
+
+            .title{
+                font-size: 1.1rem;
+                color: var(--white);
+                text-align: center;
+                padding: 1rem;
+            }
+
+            .img{
+                display: flex;
+
+                & img{
+                    width: 100%;
+                    height: fit-content;
+                }
+            }
+
+            .info{
+                align-self: flex-start;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 1rem;
+
+                .info-item{
+                    display: flex;
+                    align-items: end;
+                    gap: .5rem;
+                    font-size: .85rem;
+                    color: var(--white);
+                    
+                    & svg{
+                        color: var(--blue);
+                        width: 1.2rem;
+                        height: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pricing{
+    width: 80vw;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    .title{
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .pricing-items{
+        display: flex;
+        width: 100%;
+        gap: 1rem;
+    
+        .item{
+            width: 100%;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            background-color: rgb(255,255,255,.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            color: var(--white);
+            border-bottom: 1px solid var(--blue);
+    
+            .title,.price{
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+
+            .month{
+                color: rgb(255,255,255,.7);
+            }
+    
+            .benefits{
+                margin-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+                font-size: .9rem;
+                color: rgb(255,255,255,.5);
+                
+                .benefit{
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+
+                    & svg{
+                        color: var(--blue);
+                    }
+                }
+            }
+    
+            & a{
+                width: 100%;
+                border-radius: .5rem;
+                text-align: center;
+                padding: .5rem 0;
+                background-color: var(--green);
+                color: var(--white);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .e-learning-hero{
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+
+        .left{
+            width: 70vw;
+
+            &::after{
+                height: 70vw;
+            }
+
+            & img{
+                width: 100%;
+            }
+        }
+
+        .right{
+            width: calc(100% - 2rem);
+            
+            .text{
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .path{
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+        padding: 0 1rem;
+        gap: 1.5rem;
+
+        .img{
+            width: 70vw;
+
+            & img{
+                width: 70vw;
+            }
+        }
+
+        .path-items{
+            width: 100%;
+            gap: 1rem;
+        }
+    }
+
+    .classes{
+        width: 100%;
+        padding: 0 1rem;
+
+        .grid{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .pricing{
+        width: 100%;
+        padding: 0 1rem;
+
+        .pricing-items{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+
+    .e-learning-hero{
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+
+        .left{
+            width: 40vw;
+
+            &::after{
+                height: 40vw;
+            }
+        }
+
+        .right{
+            width: calc(100% - 2rem);
+            text-align: center;
+            align-items: center;
+        }
+    }
+
+    .path{
+        width: 90vw;
+        flex-direction: column-reverse;
+
+        .path-items{
+            width: 100%;
+        }
+
+        .img{
+            width: 40vw;
+        }
+    }
+
+    .classes{
+        width: 90vw;
+
+        .grid{
+            grid-template-columns: repeat(3,auto);
+            grid-template-rows: repeat(3,auto);
+        }
+    }
+
+    .pricing{
+        width: 90vw;
+
+        .pricing-items{
+            width: 100%;
+        }
+    }
+}
