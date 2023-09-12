@@ -1,6 +1,7 @@
 import logo from "../assets/logo-black.png"
 import google from "../assets/google.png"
 import "../style/Login-Signup.css"
+import { Link } from "react-router-dom"
 
 export default function LoginSignup({ page }){
 
@@ -56,7 +57,7 @@ export default function LoginSignup({ page }){
                     <span>{page === "login" ? "Sign in" : "Sign up"} with Google</span>
                 </div>
                 <div className="already">
-                    New to Jcode? <a href={`${page === "login" ? "/signup" : "/login"}`}>{page === "login" ? "Sign up" : "Login"}</a>
+                    New to Jcode? <Link to={`${page === "login" ? "/signup" : "/login"}`}>{page === "login" ? "Sign up" : "Login"}</Link>
                 </div>
             </form>
         </section>
