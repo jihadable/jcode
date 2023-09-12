@@ -8,39 +8,40 @@ html{
     margin: auto;
     display: flex;
     height: 100vh;
+    width: 100%;
+    padding: 0 10vw;
+    gap: 3rem;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     .left{
         position: relative;
-        width: 300px;
+        width: 30%;
 
         &::after{
-            position: absolute;
             content: "";
-            width: 100%;
-            height: 100%;
+            position: absolute;
+            background-color: rgb(0, 136, 12,.2);
+            z-index: -1;
             top: 0;
             left: 0;
-            height: 300px;
-            background-color: rgb(0, 136, 12,.3);
-            z-index: -5;
-            border-radius: 30px;
-            transform: rotate(10deg);
+            width: 100%;
+            height: 100%;
+            border-radius: 2rem;
             animation: rotate 7s linear infinite;
         }
 
         & img{
             width: 100%;
-            border-radius: 2.5rem;
+            border-radius: 2rem;
         }
     }
 
     .right{
         display: flex;
         flex-direction: column;
-        gap: 10px;
-        width: 50vw;
+        gap: 1rem;
+        width: 70%;
 
         .text{
             font-size: 2rem;
@@ -134,7 +135,7 @@ html{
         &::before{
             content: "";
             z-index: -1;
-            border-radius: 15px;
+            border-radius: 2rem;
             position: absolute;
             width: 100%;
             height: 100%;
@@ -147,7 +148,7 @@ html{
         & img{
             width: 100%;
             height: fit-content;
-            border-radius: 1rem;
+            border-radius: 2rem;
         }
     }
 }
