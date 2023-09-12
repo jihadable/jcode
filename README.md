@@ -1,8 +1,12 @@
-# React + Vite
+# Jcode 🧑‍💻
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Jcode is an online course platform for learning programming. This website showcases a landing page, the classes taught at Jcode, and the learning system within Jcode.
 
-Currently, two official plugins are available:
+👉 [Live Demo](https://jcode-2110.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+» Vanilla CSS
+<br/>
+» ReactJS
+
+<img src="https://umarjihad.netlify.app/pic/jcode.png" />
