@@ -4,6 +4,8 @@ import cooperation from "../assets/cooperation.png"
 import skills from "../assets/skills.png"
 import coding from "../assets/coding.png"
 import programmer from "../assets/programmer.png"
+import { Link } from "react-router-dom"
+import goTop from "./goTop"
 
 export default function Career(){
     return (
@@ -40,7 +42,7 @@ export default function Career(){
                     <div className="content">
                         <div className="header">Flexible learning of hundreds of skills and obtain certificates.</div>
                         <div className="text">Experience the freedom to learn at your own pace and acquire certificates as you master hundreds of skills through our online programming courses.</div>
-                        <a href="/signup" className="join-now">Join Now</a>
+                        <Link to="/login" onClick={goTop} className="join-now">Join Now</Link>
                     </div>
                     <div className="img">
                         <img src={coding} alt="Coding" />
@@ -50,7 +52,7 @@ export default function Career(){
                     <div className="content">
                         <div className="header">Explore skills intensively through live online learning and practice.</div>
                         <div className="text">Dive deep into skill development with live online sessions, where you can engage intensively in learning and hands-on practice to enhance your programming expertise.</div>
-                        <a href="/signup" className="join-now">Join Now</a>
+                        <Link to="/login" onClick={goTop} className="join-now">Join Now</Link>
                     </div>
                     <div className="img">
                         <img src={programmer} alt="Programmer" />

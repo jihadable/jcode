@@ -5,6 +5,8 @@ import { useState } from "react"
 import { IconX } from "@tabler/icons-react"
 import { useRef } from "react"
 import { useEffect } from "react"
+import { Link } from "react-router-dom"
+import goTop from "./goTop"
 
 export default function Navbar({ page }){
 
@@ -24,20 +26,20 @@ export default function Navbar({ page }){
     return (
         <>
         <nav className="navbar">
-            <a href={"/"} className="logo">
+            <Link to={"/"} onClick={goTop} className="logo">
                 <img src={logo} alt="Logo" />
-            </a>
+            </Link>
             <div className={`links ${showNavbar ? "active" : ""}`} ref={navLinks}>
                 <div className="close-navbar" onClick={() => {setShowNavbar(false)}}>
                     <IconX stroke={1.5} />
                 </div>
-                <a href={"/"} className={`${page === "Home" ? "page" : ""}`}>Home</a>
-                <a href={"/about"} className={`${page === "About" ? "page" : ""}`}>About</a>
-                <a href={"/e-learning"} className={`${page === "E-learning" ? "page" : ""}`}>E-Learning</a>
-                <a href={"/login"} className="signin">Sign In</a>
+                <Link to={"/"} onClick={goTop} className={`${page === "Home" ? "page" : ""}`}>Home</Link>
+                <Link to={"/about"} onClick={goTop} className={`${page === "About" ? "page" : ""}`}>About</Link>
+                <Link to={"/e-learning"} onClick={goTop} className={`${page === "E-learning" ? "page" : ""}`}>E-Learning</Link>
+                <Link to={"/login"} onClick={goTop} className="signin">Sign In</Link>
             </div>
             <div className="extra">
-                <a href={"/login"} className="signin">Sign In</a>
+                <Link to={"/login"} onClick={goTop} className="signin">Sign In</Link>
                 <span className="mobile-menu" onClick={() => {setShowNavbar(!showNavbar)}} ref={showNavbarBtn}>
                     <IconMenu2 stroke={1.5} />
                 </span>
