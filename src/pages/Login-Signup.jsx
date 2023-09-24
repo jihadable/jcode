@@ -13,15 +13,18 @@ export default function LoginSignup({ page }){
                     <img src={logo} alt="Logo" />
                 </div>
                 <div className="head-text">{page === "login" ? "Sign In to Jcode" : "Sign Up to Jcode"}</div>
-                <div className="username">
-                    <label htmlFor="username">Username {page === "login" ? "or email address" : ""}</label>
-                    <input type="text" id="username" />
-                </div>
+                {
+                    page === "login" &&
+                    <div className="username">
+                        <label htmlFor="username">Username {page === "login" ? "or email address" : ""}</label>
+                        <input type="text" id="username" />
+                    </div>
+                }
                 {
                     page === "signup" &&
                     <div className="email">
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email" />
+                        <input type="text" id="email" />
                     </div>
                 }
                 <div className="password">
@@ -38,7 +41,7 @@ export default function LoginSignup({ page }){
                     page === "signup" &&
                     <div className="confirm-password">
                         <label htmlFor="confirm-password">Confirm password</label>
-                        <input type="email" id="confirm-password" />
+                        <input type="password" id="confirm-password" />
                     </div>
                 }
                 <div className="bottom">

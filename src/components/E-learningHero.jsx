@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import elearning from "../assets/img1-header.jpg"
+import elearning from "../assets/e-learning-header.png"
 import goTop from "./goTop"
 
 export default function ELearningHero(){

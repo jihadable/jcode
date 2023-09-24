@@ -171,7 +171,6 @@ html{
     .grid{
         display: grid;
         grid-template-columns: repeat(4,1fr);
-        grid-template-rows: repeat(2,1fr);
         gap: 1rem;
         
         .item{
@@ -405,7 +404,6 @@ html{
 
         .grid{
             grid-template-columns: repeat(3,auto);
-            grid-template-rows: repeat(3,auto);
         }
     }
 

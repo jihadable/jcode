@@ -1,3 +1,4 @@
+import BestClasses from "../components/BestClasses";
 import Career from "../components/Career";
 import Company from "../components/Company";
 import Faqs from "../components/Faqs";
@@ -17,6 +18,7 @@ export default function Home(){
         <Career />
         <Playground />
         <Why />
+        <BestClasses />
         <Faqs />
         <Testimonials />
         <Company />

@@ -21,7 +21,7 @@ export default function OurTeam(){
         },
         {
             name: "Noah Turner",
-            job: "Full Stack Developer at Kahoot",
+            job: "AI Engineer at Kahoot",
             img: member2
         },
         {
@@ -41,7 +41,7 @@ export default function OurTeam(){
         },
         {
             name: "Aiden Scott",
-            job: "Android Developer at Traveloka",
+            job: "Cyber Security at Traveloka",
             img: member6
         },
         {

@@ -395,6 +395,76 @@
     }   
 }
 
+.best-classes{
+    width: 80vw;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    color: var(--white);
+
+    .title{
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .items{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+
+        .item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 1rem;
+            overflow: hidden;
+            background-color: rgb(255,255,255,.05);
+            border: 2px solid rgb(255,255,255,.07);
+
+            .title{
+                font-size: 1.1rem;
+                color: var(--white);
+                text-align: center;
+                padding: 1rem;
+            }
+
+            .img{
+                display: flex;
+
+                & img{
+                    width: 100%;
+                    height: fit-content;
+                }
+            }
+
+            .info{
+                align-self: flex-start;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 1rem;
+
+                .info-item{
+                    display: flex;
+                    align-items: end;
+                    gap: .5rem;
+                    font-size: .85rem;
+                    color: var(--white);
+                    
+                    & svg{
+                        color: var(--blue);
+                        width: 1.2rem;
+                        height: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .faqs{
     width: 80vw;
     margin: 5rem auto;
@@ -691,6 +761,16 @@
         }
     }
 
+    .best-classes{
+        width: 100%;
+        padding: 0 1rem;
+
+        .items{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
     .faqs{
         width: 100vw;
         padding: 0 1rem;
@@ -773,6 +853,14 @@
 
         .content{
             gap: 1rem;
+        }
+    }
+
+    .best-classes{
+        width: 90vw;
+
+        .items{
+            grid-template-columns: repeat(3,auto);
         }
     }
 
