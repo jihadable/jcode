@@ -67,7 +67,7 @@
     .items{
         width: 100%;
         display: flex;
-        gap: 1.5rem;
+        gap: 1rem;
 
         .item{
             display: flex;
@@ -85,14 +85,15 @@
     .benefits{
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 5rem;
+        margin-top: 5rem;
         
         .item{
             display: flex;
+            align-items: center;
             width: 100%;
-            border-radius: 0.8rem;
             overflow: hidden;
-            background-color: rgb(255,255,255,.05);
+            gap: 1rem;
     
             &:nth-child(2){
                 flex-direction: row-reverse;
@@ -101,13 +102,12 @@
             .content{
                 display: flex;
                 flex-direction: column;
-                gap: 1.5rem;
+                gap: 1rem;
                 width: 60%;
-                padding: 1rem;
                 color: #eee;
         
                 .header{
-                    font-size: 1.5rem;
+                    font-size: 1.4rem;
                     font-weight: bold;
                     color: var(--green);
                 }
@@ -140,7 +140,9 @@
                 width: 40%;
         
                 & img{
-                    width: 100%
+                    width: 100%;
+                    height: fit-content;
+                    border-radius: .5rem;
                 }
             }
         }
@@ -355,7 +357,7 @@
         display: flex;
         width: 100%;
         justify-content: space-between;
-        gap: 1.5rem;
+        gap: 1rem;
 
         .item{
             display: flex;
@@ -829,15 +831,23 @@
 
     .career{
         width: 90vw;
-
-        .content{
-            gap: 1rem;
-
+        
+        .benefits{
             .item{
+                flex-direction: column-reverse;
+                gap: 1rem;
+
+                &:nth-child(2){
+                    flex-direction: column-reverse;
+                }
+
                 .img{
-                    & img{
-                        width: 5rem;
-                    }
+                    width: 100%;
+                }
+
+                .content{
+                    width: 100%;
+                    padding: 0;
                 }
             }
         }
