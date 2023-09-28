@@ -19,7 +19,7 @@ export default function Class({ item }){
                 <div className="title">{item.title}</div>
                 <div className="topics-list">
                 {
-                    item.topic_list.map((item, index) => {
+                    item.topicsList.map((item, index) => {
                         return (
                             <div className="topic" key={index}>
                                 <IconChevronsRight stroke={1.5} width={20} height={20} />
