@@ -8,6 +8,7 @@ import { Link } from "react-router-dom"
 import goTop from "./goTop"
 
 export default function Career(){
+
     return (
         <section className="career">
             <div className="title">Start your career with Jcode</div>

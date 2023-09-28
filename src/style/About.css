@@ -221,7 +221,7 @@
     .about-hero{
         padding: 0 5vw;
         
-        &-content{
+        .content{
             gap: 2rem;
         }
     }

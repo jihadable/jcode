@@ -13,13 +13,13 @@ export default function Class({ item }){
         <Navbar page={"E-learning"} />
         <section className="class-detail">
             <div className="img">
-                <img src={item.img} alt={item.title} />
+                <img src={item.img} alt={item.title} loading="lazy" />
             </div>
             <div className="info">
                 <div className="title">{item.title}</div>
                 <div className="topics-list">
                 {
-                    item.topicsList.map((item, index) => {
+                    item.topic_list.map((item, index) => {
                         return (
                             <div className="topic" key={index}>
                                 <IconChevronsRight stroke={1.5} width={20} height={20} />
