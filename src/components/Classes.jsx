@@ -26,7 +26,7 @@ export default function Classes(){
                                 </div>
                                 <div className="info-item">
                                     <IconBook2 stroke={1.5} />
-                                    <span>{item.topic_list.length} Topics</span>
+                                    <span>{item.topicsList.length} Topics</span>
                                 </div>
                                 <div className="info-item">
                                     <IconStar stroke={1.5} />
