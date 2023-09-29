@@ -4,10 +4,24 @@ import LoginSignup from './pages/Login-Signup';
 import About from './pages/About';
 import ELearning from './pages/E-learning';
 import Class from './pages/Class';
-import { classesData } from './components/ClassesData';
+// import { classesData } from './components/ClassesData';
+import { useState, useEffect } from 'react';
 
 export default function Router(){
     
+    const [classesData, setClassesData] = useState([])
+
+    useEffect(() => {
+        const getClassesData = async() => {
+            let response = await fetch("https://umar-api.000webhostapp.com/jcode/classes/")
+            response = await response.json()
+            response = response.map(item => ({...item, topic_list: JSON.parse(item.topic_list)}))
+
+            setClassesData(response)
+        }
+
+        getClassesData()
+    }, [])
 
     return (
         <BrowserRouter>
