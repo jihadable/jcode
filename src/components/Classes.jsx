@@ -3,9 +3,7 @@ import { IconStar } from "@tabler/icons-react"
 import { IconBook2 } from "@tabler/icons-react"
 import goTop from "./goTop"
 import { Link } from "react-router-dom"
-// import { classesData } from '../components/ClassesData';
-import { useState } from "react"
-import { useEffect } from "react"
+import { useState, useEffect } from "react"
 
 export default function Classes(){
 

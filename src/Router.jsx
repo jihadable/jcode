@@ -4,7 +4,6 @@ import LoginSignup from './pages/Login-Signup';
 import About from './pages/About';
 import ELearning from './pages/E-learning';
 import Class from './pages/Class';
-// import { classesData } from './components/ClassesData';
 import { useState, useEffect } from 'react';
 
 export default function Router(){
