@@ -9,10 +9,11 @@ import { useState, useEffect } from 'react';
 export default function Router(){
     
     const [classesData, setClassesData] = useState([])
+    const classes_api_endpoint = import.meta.env.VITE_CLASSES_API_ENDPOINT
 
     useEffect(() => {
         const getClassesData = async() => {
-            let response = await fetch("https://umar-api.000webhostapp.com/jcode/classes/")
+            let response = await fetch(classes_api_endpoint)
             response = await response.json()
             response = response.map(item => ({...item, topic_list: JSON.parse(item.topic_list)}))
 
