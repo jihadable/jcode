@@ -13,19 +13,19 @@ export default function Class(){
 
     const { classes } = useContext(ClassesContext)
 
-    const item = classes ? classes.filter(item => item.slug === slug)[0] : {}
+    const item = classes?.filter(item => item.slug === slug)[0]
 
-    document.title = "Jcode | " + item?.title 
+    document.title = "Jcode | " + (item?.title ?? "Class")
 
     return (
         <>
         <Navbar page={"E-learning"} />
         <section className="class-detail">
             <div className="img">
-                <img src={item.img} alt={item.title} loading="lazy" />
+                <img src={item?.img} alt={item?.title} loading="lazy" />
             </div>
             <div className="info">
-                <div className="title">{item.title}</div>
+                <div className="title">{item?.title}</div>
                 <div className="topics-list">
                 {classes &&
                     item.topic_list.map((item, index) => {
