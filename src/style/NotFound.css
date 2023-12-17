@@ -1,0 +1,29 @@
+@import url("./index.css");
+
+.not-found-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .not-found{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--white);
+
+        & a{
+            padding: 5px 10px;
+            border: 2px solid var(--green);
+            border-radius: 5px;
+            color: var(--white);
+            transition: all .2s;
+            text-decoration: none;
+
+            &:hover{
+                background-color: var(--green);
+            }
+        }
+    }
+}
