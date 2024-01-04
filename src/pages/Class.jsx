@@ -3,19 +3,16 @@ import Footer from "../components/Footer"
 import Classes from "../components/Classes"
 import { IconChevronsRight } from "@tabler/icons-react"
 import "../style/Class.css"
+import { classesData } from "../components/ClassesData"
 import { useParams } from "react-router-dom"
-import { useContext } from "react"
-import { ClassesContext } from "../contexts/ClassesContext"
 
 export default function Class(){
 
     const { slug } = useParams()
 
-    const { classes } = useContext(ClassesContext)
+    const item = classesData.filter(item => item.slug == slug)[0]
 
-    const item = classes?.filter(item => item.slug === slug)[0]
-
-    document.title = "Jcode | " + (item?.title ?? "Class")
+    document.title = "Jcode | " + item.title
 
     return (
         <>
@@ -27,7 +24,7 @@ export default function Class(){
             <div className="info">
                 <div className="title">{item?.title}</div>
                 <div className="topics-list">
-                {classes &&
+                {classesData &&
                     item.topic_list.map((item, index) => {
                         return (
                             <div className="topic" key={index}>

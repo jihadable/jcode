@@ -3,19 +3,16 @@ import { IconStar } from "@tabler/icons-react"
 import { IconBook2 } from "@tabler/icons-react"
 import goTop from "./goTop"
 import { Link } from "react-router-dom"
-import { useContext } from "react"
-import { ClassesContext } from "../contexts/ClassesContext"
+import { classesData } from "./ClassesData"
 
 export default function Classes(){
-
-    const { classes } = useContext(ClassesContext)
 
     return (
         <section className="classes" id="classes">
             <div className="title">Classes</div>
             <div className="grid">
             {
-                classes?.map((item, index) => {
+                classesData.map((item, index) => {
                     return (
                         <Link to={`/e-learning/${item.slug}`} onClick={goTop} className="item" key={index}>
                             <div className="title">{item.title}</div>
