@@ -1,12 +1,10 @@
-import { IconUserPlus } from "@tabler/icons-react"
-import { IconStar } from "@tabler/icons-react"
-import { IconBook2 } from "@tabler/icons-react"
+import { IconBook2, IconStar, IconUserPlus } from "@tabler/icons-react"
 import { Link } from "react-router-dom"
-import goTop from "./goTop"
 import backend from "../assets/backend.jpg"
+import cloud from "../assets/cloud.jpg"
 import cyber from "../assets/cyber.jpg"
 import data from "../assets/data.jpg"
-import cloud from "../assets/cloud.jpg"
+import goTop from "../utils/goTop"
 
 export default function BestClasses(){
 
@@ -47,33 +45,31 @@ export default function BestClasses(){
 
     return (
         <section className="best-classes">
-            <div className="title">Our Best Classes</div>
+            <div className="title">Kelas Terbaik Kami</div>
             <div className="items">
             {
-                bestClassesData.map((item, index) => {
-                    return (
-                        <Link to={`/e-learning/${item.slug}`} onClick={goTop} className="item" key={index}>
-                            <div className="title">{item.title}</div>
-                            <div className="img">
-                                <img src={item.img} alt="Develoment" />
+                bestClassesData.map((item, index) => (
+                    <Link to={`/classes/${item.slug}`} onClick={goTop} className="item" key={index}>
+                        <div className="title">{item.title}</div>
+                        <div className="img">
+                            <img src={item.img} alt="Develoment" />
+                        </div>
+                        <div className="info">
+                            <div className="info-item">
+                                <IconUserPlus stroke={1.5} />
+                                <span>{item.member}+</span>
                             </div>
-                            <div className="info">
-                                <div className="info-item">
-                                    <IconUserPlus stroke={1.5} />
-                                    <span>{item.member}+</span>
-                                </div>
-                                <div className="info-item">
-                                    <IconBook2 stroke={1.5} />
-                                    <span>{item.topic_list.length} Topics</span>
-                                </div>
-                                <div className="info-item">
-                                    <IconStar stroke={1.5} />
-                                    <span>{item.rating}/5</span>
-                                </div>
+                            <div className="info-item">
+                                <IconBook2 stroke={1.5} />
+                                <span>{item.topic_list.length} Topics</span>
                             </div>
-                        </Link>
-                    )
-                })
+                            <div className="info-item">
+                                <IconStar stroke={1.5} />
+                                <span>{item.rating}/5</span>
+                            </div>
+                        </div>
+                    </Link>
+                ))
             }
             </div>
         </section>

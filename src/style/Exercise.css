@@ -1,0 +1,155 @@
+@import url("./index.css");
+
+.exercise-section{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 7rem auto;
+
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: .5rem;
+
+        & svg{
+            color: var(--green);
+        }
+    }
+
+    .description{
+        margin-top: 2rem;
+        color: #ccc;
+
+        & code{
+            font-size: 1rem;
+        }
+    }
+
+    .code{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .code-section{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .lang{
+                align-self: self-end;
+                position: relative;
+
+                .lang-btn{
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    border-bottom: 1px solid var(--blue);
+                    cursor: pointer;
+                    padding: 0 .5rem;
+                }
+
+                .lang-menu{
+                    position: absolute;
+                    top: 105%;
+                    right: 0;
+                    background-color: var(--white);
+                    color: black;
+                    backdrop-filter: blur(10px);
+                    border-radius: .2rem;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: all .2s;
+                    z-index: 1;
+        
+                    &.active{
+                        max-height: 999px;
+                    }
+    
+                    & div{
+                        padding: .25rem .5rem;
+                        cursor: pointer;
+    
+                        &:hover{
+                            background-color: rgb(0,0,0,.15);
+                        }
+                    }
+                }
+            }
+        }
+
+        .run-code{
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+
+            .loader{
+                background-color: var(--green);
+                border: 2px solid var(--green);
+                padding: 5px 2.3rem;
+                align-self: self-end;
+                border-radius: 5px;
+            }
+
+            .run-code-btn{
+                outline: none;
+                font-size: 1rem;
+                width: fit-content;
+                background-color: transparent;
+                color: var(--white);
+                padding: 5px 10px;
+                border: 2px solid #00880c;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all .2s;
+                align-self: self-end;
+
+                &:hover{
+                    background-color: #00880c;
+                }
+            }
+
+            .result{
+                padding: 0.5rem;
+                background-color: rgb(255,255,255,.05);;
+                border-radius: 5px;
+                color: #ccc;
+                
+                .test-cases{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+
+                    .test-case{
+                        display: flex;
+                        align-items: center;
+                        gap: 0.25rem;
+
+                        & svg.ac{
+                            color: var(--green);
+                        }
+
+                        & svg.wa{
+                            color: #ff3d3d;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .exercise-section{
+        width: 100%;
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+    .exercise-section{
+        width: 90vw;
+    }
+}

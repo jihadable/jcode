@@ -38,16 +38,24 @@
             }
         }
 
+        .mobile-links{
+            display: none;
+        }
+
         & a{
             text-decoration: none;
             color: var(--white);
             position: relative;
 
+            &.signin-btn{
+                display: none;
+            }
+
             &.page::after{
                 width: 100%;
             }
 
-            &.signin{
+            &.signin-btn{
                 display: none;
             }
 
@@ -75,7 +83,52 @@
         gap: 10px;
         color: var(--white);
 
-        .signin{
+        .account-nav{
+            display: flex;
+            position: relative;
+
+            .account-btn{
+                display: flex;
+                cursor: pointer;
+
+                & img{
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    border-radius: 100rem;
+                }
+            }
+
+            .account-menu{
+                position: absolute;
+                z-index: 1;
+                top: 110%;
+                right: 0;
+                background-color: var(--white);
+                color: black;
+                border-radius: .2rem;
+                max-height: 0;
+                overflow: hidden;
+                transition: all .2s;
+                display: flex;
+                flex-direction: column;
+                
+                & a, & button{
+                    padding: 0.2rem .5rem;
+                    padding-right: 2rem;
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: rgb(0,0,0,.15);
+                    }
+                }
+
+                &.active{
+                    max-height: 999px;
+                }
+            }
+        }
+
+        .signin-btn{
             padding: 5px 10px;
             border: 2px solid #00880c;
             border-radius: 5px;
@@ -105,7 +158,6 @@
 }
 
 @media screen and (max-width: 480px) {
-
     .navbar{
         justify-content: space-between;
         padding: 1rem;
@@ -133,13 +185,15 @@
                 display: flex;
             }
 
-            .signin{
-                display: block;
+            & a{
+                &.signin-btn{
+                    display: block;
+                }
             }
         }
 
         .extra{
-            .signin{
+            .signin-btn{
                 display: none;
             }
 

@@ -5,3 +5,34 @@
     --blue: #5d7ef3;
     --dark-blue: rgb(0, 0, 15);
 }
+
+button{
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+input, textarea{
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.spinner {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    padding: 1.4px;
+    background: radial-gradient(farthest-side,#000 95%,#0000) 50% 0/5.8px 5.8px no-repeat,
+                radial-gradient(farthest-side,#0000 calc(100% - 2.4px),#000 calc(100% - 1.9px)) content-box;
+    animation: spinner-x3enp9 1.2000000000000002s infinite;
+}
+
+@keyframes spinner-x3enp9 {
+    to {
+        transform: rotate(1turn);
+    }
+}

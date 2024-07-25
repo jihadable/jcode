@@ -1,0 +1,177 @@
+@import url("./index.css");
+
+.about-codex{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 7rem auto 5rem;
+    color: #ccc;
+
+    & code{
+        font-size: 1rem;
+        background-color: #131414;
+        background-color: rgb(255,255,255,.05);
+        color: white;
+        padding: .25rem;
+        border-radius: .25rem;
+    }
+
+    & ul{
+        margin-left: 1.5rem;
+    }
+}
+
+.codex-section{
+    width: 80vw;
+    display: flex;
+    gap: 1rem;
+    margin: auto;
+
+    .filter{
+        width: 30%;
+        border-radius: .5rem;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        background-color: rgb(255,255,255,.05);
+        height: fit-content;
+        
+        .status, .difficulty{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            
+            .label{
+                font-size: .8rem;
+            }
+            
+            .value{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 1px solid var(--blue);
+                cursor: pointer;
+            }
+
+            .menu{
+                position: absolute;
+                top: 105%;
+                left: 0;
+                right: 0;
+                background-color: var(--white);
+                color: black;
+                backdrop-filter: blur(10px);
+                border-radius: .2rem;
+                max-height: 0;
+                overflow: hidden;
+                transition: all .2s;
+                z-index: 1;
+    
+                &.active{
+                    max-height: 999px;
+                }
+
+                & div{
+                    padding: 0 .25rem;
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: rgb(0,0,0,.15);
+                    }
+                }
+            }
+        }
+    }
+
+    .codex-items{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        .items{
+            display: flex;
+            flex-direction: column;
+            border-radius: .25rem;
+            overflow: hidden;
+            gap: .25rem;
+
+            .item{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: rgb(255,255,255,.05);
+                padding: 0.5rem;
+
+                .title{
+                    width: 100%;
+                }
+
+                .status{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: .5rem;
+                    width: 20px;
+                    height: 20xp;
+
+                    .ac{
+                        color: var(--green);
+                    }
+
+                    .wa{
+                        color: #ff3d3d;
+                    }
+                }
+    
+                .difficulty{
+                    font-size: .8rem;
+                    padding: 0 .25rem;
+                    border-radius: .25rem;
+                    color: black;
+    
+                    &.Easy{
+                        background-color: var(--green);
+                    }
+                    
+                    &.Medium{
+                        background-color: gold;
+                    }
+    
+                    &.Hard{
+                        background-color: #ff3d3d;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-codex{
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .codex-section{
+        width: 100%;
+        padding: 0 1rem;
+        flex-direction: column;
+
+        .filter{
+            width: 100%;
+        }
+
+        .codex-items{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+    .about-codex, .codex-section{
+        width: 90vw;
+    }
+}

@@ -4,20 +4,20 @@ export default function Path(){
 
     const pathData = [
         {
-            title: "Introducing to code",
-            text: "In this introductory module, you'll embark on a coding journey, exploring the basics of programming languages. Gain a solid foundation and unlock the world of coding."
+            title: "Pengenalan dengan code",
+            text: "Dalam modul pengantar ini, Anda akan memulai perjalanan coding, mengeksplorasi dasar-dasar bahasa pemrograman. Dapatkan dasar yang kuat dan buka pintu menuju dunia coding."
         },
         {
-            title: "How to write code effectively",
-            text: "Learn the art of writing efficient and clean code. Discover best practices, coding styles, and tools to make your code not only functional but also elegant and maintainable."
+            title: "Bagaimana menulic code dengan efektif",
+            text: "Pelajari seni menulis code yang efisien dan bersih. Temukan praktik terbaik, gaya coding, dan alat untuk membuat code Anda tidak hanya fungsional tetapi juga elegan dan mudah dipelihara."
         },
         {
-            title: "Practice to build projects",
-            text: "Dive into hands-on coding projects that challenge and enhance your skills. From small scripts to full-scale applications, you'll build a portfolio showcasing your coding prowess."
+            title: "Latihan membuat proyek",
+            text: "Terjun ke dalam proyek coding praktis yang menantang dan meningkatkan keterampilan Anda. Dari skrip kecil hingga aplikasi berskala penuh, Anda akan membangun portofolio yang menampilkan keahlian coding Anda."
         },
         {
-            title: "Apply your dream job",
-            text: "Your coding skills are now ready to shine in the job market. Explore tips for acing technical interviews, creating a standout resume, and landing your dream job in the programming field."
+            title: "Temukan karir impian",
+            text: "Keterampilan coding Anda kini siap bersinar di pasar kerja. Jelajahi tips untuk menghadapi wawancara teknis dengan sukses, membuat resume yang menonjol, dan mendapatkan pekerjaan impian Anda di bidang programming."
         }
     ]
 
@@ -25,14 +25,12 @@ export default function Path(){
         <section className="path">
             <div className="path-items">
             {
-                pathData.map((item, index) => {
-                    return (
-                        <div className="item" key={index}>
-                            <div className="title">{item.title}</div>
-                            <p className="text">{item.text}</p>
-                        </div>
-                    )
-                })
+                pathData.map((item, index) => (
+                    <div className="item" key={index}>
+                        <div className="title">{item.title}</div>
+                        <p className="text">{item.text}</p>
+                    </div>
+                ))
             }
             </div>
             <div className="img">

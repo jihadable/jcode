@@ -1,7 +1,6 @@
-import { IconTargetArrow } from "@tabler/icons-react";
-import { IconHistory } from "@tabler/icons-react";
-import coding from "../assets/coding.jpg"
-import coding2 from "../assets/coding2.jpg"
+import { IconHistory, IconTargetArrow } from "@tabler/icons-react";
+import coding from "../assets/coding.jpg";
+import coding2 from "../assets/coding2.jpg";
 
 export default function TargetAndHistory(){
     return (
@@ -9,8 +8,8 @@ export default function TargetAndHistory(){
             <div className="target">
                 <div className="left">
                     <IconTargetArrow stroke={1.5} />
-                    <div className="header">Our Target</div>
-                    <div className="text">At Jcode, our primary goal is to empower individuals with the skills and knowledge needed to excel in the world of programming. We are committed to providing accessible and high-quality online courses that cater to beginners and experienced coders alike. Our target is to create a supportive learning community that fosters innovation and opens doors to exciting career opportunities in the tech industry.</div>
+                    <div className="header">Target Kami</div>
+                    <div className="text">Di Jcode, tujuan utama kami adalah memberdayakan individu dengan keterampilan dan pengetahuan yang diperlukan untuk unggul di dunia programming. Kami berkomitmen untuk menyediakan kursus online yang berkualitas tinggi dan mudah diakses, baik untuk pemula maupun coder berpengalaman. Target kami adalah menciptakan komunitas belajar yang mendukung, mendorong inovasi, dan membuka pintu menuju peluang karir yang menarik di industri teknologi.</div>
                 </div>
                 <div className="right">
                     <img src={coding2} alt="Coding" />
@@ -19,8 +18,8 @@ export default function TargetAndHistory(){
             <div className="history">
                 <div className="left">
                     <IconHistory stroke={1.5} />
-                    <div className="header">Our History</div>
-                    <div className="text">Jcode has a rich history of delivering top-notch programming education. Founded in 2014, we've come a long way, shaping the journeys of countless aspiring developers. Over the years, we've evolved our curriculum to stay current with industry trends and technologies. Our history is a testament to our dedication to excellence in teaching and guiding students toward programming success.</div>
+                    <div className="header">Latar Belakang</div>
+                    <div className="text">Jcode memiliki pengalaman yang kaya dalam memberikan pendidikan programming berkualitas tinggi. Didirikan pada tahun 2014, kami telah menempuh perjalanan panjang dalam membentuk perjalanan banyak pengembang yang bercita-cita tinggi. Selama bertahun-tahun, kami telah mengembangkan kurikulum kami untuk tetap relevan dengan tren dan teknologi industri. Pengalaman kami adalah bukti dedikasi kami terhadap keunggulan dalam pengajaran dan bimbingan siswa menuju kesuksesan dalam programming.</div>
                 </div>
                 <div className="right">
                     <img src={coding} alt="Coding" />

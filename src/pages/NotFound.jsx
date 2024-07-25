@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import img404 from "../assets/404.png"
-import "../style/NotFound.css"
+import img404 from "../assets/404.png";
+import "../style/NotFound.css";
+import goTop from "../utils/goTop";
 
 export default function NotFound(){
     return (
@@ -10,7 +11,7 @@ export default function NotFound(){
                 <div className="img">
                     <img src={img404} alt="404" />
                 </div>
-                <Link to={"/"}>Back to Home</Link>
+                <Link to={"/"} onClick={goTop}>Back to Home</Link>
             </div>
         </div>
     )

@@ -1,49 +1,49 @@
-import world from "../assets/world.png"
-import job from "../assets/job.png"
-import cooperation from "../assets/cooperation.png"
-import skills from "../assets/skills.png"
-import coding from "../assets/coding.png"
-import programmer from "../assets/programmer.png"
 import { Link } from "react-router-dom"
-import goTop from "./goTop"
+import coding from "../assets/coding.png"
+import cooperation from "../assets/cooperation.png"
+import job from "../assets/job.png"
+import programmer from "../assets/programmer.png"
+import skills from "../assets/skills.png"
+import world from "../assets/world.png"
+import goTop from "../utils/goTop"
 
 export default function Career(){
 
     return (
         <section className="career">
-            <div className="title">Start your career with Jcode</div>
+            <div className="title">Mulai karir mu dengan Jcode</div>
             <div className="items">
                 <div className="item">
                     <div className="item-img">
                         <img src={world} alt="World" />
                     </div>
-                    <div className="item-text">Jcode have over 1 million Users</div>
+                    <div className="item-text">Jcode memiliki 250+ pengguna</div>
                 </div>
                 <div className="item">
                     <div className="item-img">
                         <img src={job} alt="Briefcase" />
                     </div>
-                    <div className="item-text">Jcode Users land jobs in Renowned Companies</div>
+                    <div className="item-text">Banyak alumni Jcode berhasil mendapatkan karir impian</div>
                 </div>
                 <div className="item">
                     <div className="item-img">
                         <img src={cooperation} alt="Cooperation" />
                     </div>
-                    <div className="item-text">Jcode collaborates with various partners</div>
+                    <div className="item-text">Jcode berkolaborasi dengan banyak partner</div>
                 </div>
                 <div className="item">
                     <div className="item-img">
                         <img src={skills} alt="Skills" />
                     </div>
-                    <div className="item-text">Master a diverse range of skills from Experts</div>
+                    <div className="item-text">Belajar banyak skill dari seorang ahli</div>
                 </div>
             </div>
             <div className="benefits">
                 <div className="item">
                     <div className="content">
-                        <div className="header">Flexible learning of hundreds of skills and obtain certificates.</div>
-                        <div className="text">Experience the freedom to learn at your own pace and acquire certificates as you master hundreds of skills through our online programming courses.</div>
-                        <Link to="/login" onClick={goTop} className="join-now">Join Now</Link>
+                        <div className="header">Pembelajaran yang fleksibel serta sertifikat yang menunjang.</div>
+                        <div className="text">Rasakan kebebasan untuk belajar sesuai dengan kecepatan Anda sendiri dan dapatkan sertifikat saat Anda menguasai ratusan keterampilan melalui kursus online programming kami.</div>
+                        <Link to="/signin" onClick={goTop} className="join-now">Masuk</Link>
                     </div>
                     <div className="img">
                         <img src={coding} alt="Coding" />
@@ -51,9 +51,9 @@ export default function Career(){
                 </div>
                 <div className="item">
                     <div className="content">
-                        <div className="header">Explore skills intensively through live online learning and practice.</div>
-                        <div className="text">Dive deep into skill development with live online sessions, where you can engage intensively in learning and hands-on practice to enhance your programming expertise.</div>
-                        <Link to="/login" onClick={goTop} className="join-now">Join Now</Link>
+                        <div className="header">Jelajahi keterampilan secara intensif melalui pembelajaran dan praktik online langsung.</div>
+                        <div className="text">Terjunlah lebih dalam dalam pengembangan keterampilan dengan sesi online langsung, di mana Anda dapat terlibat secara intensif dalam pembelajaran dan praktik langsung untuk meningkatkan keahlian programming Anda.</div>
+                        <Link to="/signin" onClick={goTop} className="join-now">Masuk</Link>
                     </div>
                     <div className="img">
                         <img src={programmer} alt="Programmer" />

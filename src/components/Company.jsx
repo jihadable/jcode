@@ -1,10 +1,10 @@
-import apple from "../assets/apple.png"
-import microsoft from "../assets/microsoft.png"
-import google from "../assets/google.png"
-import spotify from "../assets/spotify.png"
 import amazon from "../assets/amazon.png"
-import tiktok from "../assets/tiktok.png"
+import apple from "../assets/apple.png"
+import google from "../assets/google.png"
 import meta from "../assets/meta.png"
+import microsoft from "../assets/microsoft.png"
+import spotify from "../assets/spotify.png"
+import tiktok from "../assets/tiktok.png"
 
 export default function Company(){
 
@@ -12,12 +12,12 @@ export default function Company(){
 
     return (
         <section className="company">
-            <div className="title">More than 4000 Jcode graduates have gotten jobs at tech companies including:</div>
+            <div className="title">Lebih dari 4000 Alumni Jcode mendapatkan pekerjaan di perusahaan teknologi terkenal seperti:</div>
             <div className="company-items">
             {
-                companyData.map((img, index) => {
-                    return <img src={img} alt="Company" key={index} />
-                })
+                companyData.map((img, index) => (
+                    <img src={img} alt="Company" key={index} />
+                ))
             }
             </div>
         </section>

@@ -5,7 +5,13 @@
     margin: 5rem auto;
     margin-top: 8rem;
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 2rem;
+
+    .top{
+        display: flex;
+        gap: 1rem;
+    }
 
     .img{
         display: flex;
@@ -80,6 +86,19 @@
             }
         }
     }
+
+    .bottom{
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        align-self: center;
+        border-radius: .5rem;
+        text-align: center;
+        padding: .5rem 2rem;
+        background-color: var(--green);
+        color: var(--white);
+        cursor: pointer;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -88,6 +107,11 @@
         margin-top: 5rem;
         padding: 0 1rem;
         flex-direction: column;
+
+        .top{
+            display: flex;
+            flex-direction: column;
+        }
 
         .img{
             & img{

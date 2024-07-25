@@ -5,24 +5,24 @@ export default function Faqs(){
 
     const faqData = [
         {
-            question: "What is Jcode?",
-            answer: "Jcode is an online platform dedicated to programming courses. We offer a wide range of programming languages and topics to help individuals develop their coding skills and advance their careers."
+            question: "Apa itu Jcode?",
+            answer: "Jcode adalah platform online yang menyediakan kurus programming. We offer a wide range of programming languages and topics to help individuals develop their coding skills and advance their careers."
         },
         {
-            question: "Is Jcode suitable for beginners with no programming experience?",
-            answer: "Absolutely! Jcode is designed to cater to learners of all levels, including beginners with no prior programming experience. Our courses start with the basics and gradually progress, making it accessible to newcomers."
+            question: "Apakah Jcode cocok dengan programmer pemula?",
+            answer: "Tentu saja! Jcode dirancang untuk memenuhi kebutuhan pelajar di semua tingkatan, termasuk pemula yang tidak memiliki pengalaman programming sebelumnya. Kursus kami dimulai dengan dasar-dasar dan secara bertahap berkembang, membuatnya mudah diakses oleh para pendatang baru."
         },
         {
-            question: "Can I earn certificates from Jcode courses?",
-            answer: "Yes, you can! Upon successful completion of our courses and associated assessments, you will receive certificates that validate your skills and knowledge in the specific programming field you've studied."
+            question: "Apakah Saya bisa mendapatkan sertifikat dari kursus di Jcode?",
+            answer: "Ya, Anda bisa! Setelah berhasil menyelesaikan kursus dan penilaian terkait, Anda akan menerima sertifikat yang memvalidasi keterampilan dan pengetahuan Anda di bidang programming yang telah Anda pelajari."
         },
         {
-            question: "Can I collaborate with other learners on Jcode?",
-            answer: "Certainly! Jcode fosters a collaborative learning environment. You can engage with fellow learners through discussion forums, group projects, and peer-to-peer support, enhancing your learning experience."
+            question: "Apakah Saya bisa berkolaborasi dengan programmer lain di Jcode?",
+            answer: "Tentu saja! Jcode mendorong lingkungan belajar yang kolaboratif. Anda dapat berinteraksi dengan sesama pembelajar melalui forum diskusi, proyek kelompok, dan dukungan antar teman, yang akan meningkatkan pengalaman belajar Anda."
         },
         {
-            question: "Is Jcode suitable for advanced programmers?",
-            answer: "Yes, Jcode caters to advanced programmers as well. We offer advanced courses that dive deep into specific topics, allowing experienced coders to further refine their skills and stay up-to-date with the latest advancements in the field."
+            question: "Apakah Jcode cocok dengan programmer yang sudah handal?",
+            answer: "Ya, Jcode juga melayani para programmer tingkat lanjut. Kami menawarkan kursus-kursus lanjutan yang mendalami topik-topik tertentu, memungkinkan para coder berpengalaman untuk lebih mengasah keterampilan mereka dan tetap mengikuti perkembangan terbaru di bidang ini."
         }
     ]
 
@@ -37,22 +37,20 @@ export default function Faqs(){
 
     return (
         <section className="faqs">
-            <div className="title">Frequently Asked Questions</div>
+            <div className="title">Pertanyaan yang Sering ditanyakan</div>
             <div className="content">
             {
-                faqData.map((item, index) => {
-                    return (
-                        <div className="item" key={index}>
-                            <div className="question" onClick={() => handleShowAnswer(index)}>
-                                <span>{item.question}</span>
-                                <IconChevronDown className={`${showAnswer[index] ? "active" : ""}`} stroke={1.5} width={16} height={16} />
-                            </div>
-                            <div className={`answer-container ${showAnswer[index] ? "active" : ""}`}>
-                                <div className="answer">{item.answer}</div>
-                            </div>
+                faqData.map((item, index) => (
+                    <div className="item" key={index}>
+                        <div className="question" onClick={() => handleShowAnswer(index)}>
+                            <span>{item.question}</span>
+                            <IconChevronDown className={`${showAnswer[index] ? "active" : ""}`} stroke={1.5} width={16} height={16} />
                         </div>
-                    )
-                })
+                        <div className={`answer-container ${showAnswer[index] ? "active" : ""}`}>
+                            <div className="answer">{item.answer}</div>
+                        </div>
+                    </div>
+                ))
             }
             </div>
         </section>

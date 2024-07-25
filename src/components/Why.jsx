@@ -1,32 +1,30 @@
-import { IconBrandAsana } from "@tabler/icons-react";
-import { IconProgressCheck } from "@tabler/icons-react";
-import { IconMessage2 } from "@tabler/icons-react";
+import { IconBrandAsana, IconMessage2, IconProgressCheck } from "@tabler/icons-react";
 
 export default function Why(){
     return (
         <section className="why">
-            <div className="title">Why Choose Us</div>
+            <div className="title">Kenapa Memilih Kami</div>
             <div className="content">
                 <div className="item">
                     <div className="svg">
                         <IconMessage2 stroke={1.5} />
                     </div>
-                    <div className="title">COMMUNICATION</div>
-                    <div className="text">We prioritize effective communication with responsive mentors and an active online community. This ensures you always receive the support you need on your programming journey.</div>
+                    <div className="title">KOMUNIKASI</div>
+                    <div className="text">Kami mengutamakan komunikasi efektif dengan mentor responsif dan komunitas online yang aktif. Hal ini memastikan Anda selalu mendapatkan dukungan yang Anda butuhkan dalam perjalanan belajar programming Anda.</div>
                 </div>
                 <div className="item">
                     <div className="svg">
                         <IconProgressCheck stroke={1.5} />
                     </div>
-                    <div className="title">PROGRESSION</div>
-                    <div className="text">We've crafted a structured curriculum, allowing you to progress step by step. With clear milestones, you can track your advancement and achieve your goals with confidence.</div>
+                    <div className="title">PROGRES</div>
+                    <div className="text">Kami telah merancang kurikulum yang terstruktur, memungkinkan Anda untuk berkembang langkah demi langkah. Dengan pencapaian yang jelas, Anda dapat melacak kemajuan Anda dan meraih tujuan dengan percaya diri.</div>
                 </div>
                 <div className="item">
                     <div className="svg">
                         <IconBrandAsana stroke={1.5} />
                     </div>
-                    <div className="title">PRACTICE</div>
-                    <div className="text">At Jcode, we emphasize hands-on practice. Our interactive coding exercises and projects give you the practical experience needed to excel in programming.</div>
+                    <div className="title">PRAKTIK</div>
+                    <div className="text">Di Jcode, kami menekankan praktik langsung. Latihan coding interaktif dan proyek-proyek kami memberikan Anda pengalaman praktis yang dibutuhkan untuk unggul dalam programming.</div>
                 </div>
             </div>
         </section>

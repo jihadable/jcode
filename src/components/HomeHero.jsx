@@ -1,31 +1,31 @@
-import figma from "../assets/figma.png"
-import swift from "../assets/swift.png"
-import react from "../assets/react.png"
 import css from "../assets/css.png"
+import figma from "../assets/figma.png"
 import html from "../assets/html.png"
+import react from "../assets/react.png"
+import swift from "../assets/swift.png"
 
-import ts from "../assets/typescript.png"
 import firebase from "../assets/firebase.png"
-import ruby from "../assets/ruby.png"
 import flutter from "../assets/flutter.png"
 import golang from "../assets/golang.png"
+import ruby from "../assets/ruby.png"
+import ts from "../assets/typescript.png"
 
-import java from "../assets/java.png"
-import python from "../assets/python.png"
-import js from "../assets/javascript.png"
 import c from "../assets/c-original.png"
+import java from "../assets/java.png"
+import js from "../assets/javascript.png"
 import kotlin from "../assets/kotlin.png"
+import python from "../assets/python.png"
 
+import androidStudio from "../assets/android-studio.png"
+import bootstrap from "../assets/bootstrap.png"
+import git from "../assets/git.png"
 import sass from "../assets/sass.png"
 import tailwind from "../assets/tailwind.png"
-import bootstrap from "../assets/bootstrap.png"
-import androidStudio from "../assets/android-studio.png"
-import git from "../assets/git.png"
 
 import angular from "../assets/angular.png"
-import vue from "../assets/vue.png"
-import php from "../assets/php.png"
 import node from "../assets/nodejs.png"
+import php from "../assets/php.png"
+import vue from "../assets/vue.png"
 import webpack from "../assets/webpack.png"
 
 export default function HomeHero(){
@@ -70,9 +70,9 @@ export default function HomeHero(){
             </div>
             <div className="info">
                 <div className="tagline">
-                    <span className="unique">A Unique Way</span> to Learn Programming
+                    <span className="unique">Cara Unik</span> Belajar Programming
                 </div>
-                <p className="text">Jcode is a platform that help you enhance your skills in programming and help you to get your dream job</p>
+                <p className="text">Jcode adalah platform yang akan membantumu meningkatkan skil programming untuk mendapatkan karir impian</p>
             </div>
         </header>
     )

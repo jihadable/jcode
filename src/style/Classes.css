@@ -4,7 +4,7 @@ html{
     scroll-behavior: smooth;
 }
 
-.e-learning-hero{
+.classes-hero{
     margin: auto;
     display: flex;
     height: 100vh;
@@ -153,7 +153,7 @@ html{
     }
 }
 
-.classes{
+.classes-section{
     width: 80vw;
     margin: 5rem auto;
     display: flex;
@@ -255,7 +255,7 @@ html{
             border-bottom: 1px solid var(--blue);
     
             .title,.price{
-                font-size: 1.5rem;
+                font-size: 1.25rem;
                 font-weight: 600;
             }
 
@@ -282,7 +282,7 @@ html{
                 }
             }
     
-            & a{
+            & button{
                 width: 100%;
                 border-radius: .5rem;
                 text-align: center;
@@ -296,7 +296,7 @@ html{
 
 @media screen and (max-width: 480px) {
 
-    .e-learning-hero{
+    .classes-hero{
         flex-direction: column;
         justify-content: center;
         gap: 20px;
@@ -343,7 +343,7 @@ html{
         }
     }
 
-    .classes{
+    .classes-section{
         width: 100%;
         padding: 0 1rem;
 
@@ -366,7 +366,7 @@ html{
 
 @media screen and (min-width: 481px) and (max-width: 1023px) {
 
-    .e-learning-hero{
+    .classes-hero{
         flex-direction: column;
         justify-content: center;
         gap: 2rem;
@@ -399,7 +399,7 @@ html{
         }
     }
 
-    .classes{
+    .classes-section{
         width: 90vw;
 
         .grid{

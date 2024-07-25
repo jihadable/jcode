@@ -5,10 +5,9 @@ import Faqs from "../components/Faqs";
 import Footer from "../components/Footer";
 import HomeHero from "../components/HomeHero";
 import Navbar from "../components/Navbar";
-import Playground from "../components/Playground";
 import Testimonials from "../components/Testimonials";
 import Why from "../components/Why";
-import "../style/Home.css"
+import "../style/Home.css";
 
 export default function Home(){
     return (
@@ -16,7 +15,6 @@ export default function Home(){
         <Navbar page={"Home"} />
         <HomeHero />
         <Career />
-        <Playground />
         <Why />
         <BestClasses />
         <Faqs />

@@ -1,6 +1,6 @@
 @import url("./index.css");
 
-.login,.signup{
+.signin,.signup{
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -87,52 +87,23 @@
                 color: black;
             }
         }
-    
-        .bottom{
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-    
-            .remember-me{
-                display: flex;
-                align-items: center;
-                gap: 0.2rem;
-                cursor: pointer;
-                
-                & input {
-                    cursor: pointer;
-                }
-            }
-    
-            & button{
-                font-size: 1rem;
-                border-radius: 5px;
-                padding: 8px;
-                border: none;
-                outline: none;
-                cursor: pointer;
-                background-color: var(--green);
-                color: var(--white);
-            }
-        }
-    
-        .google{
+
+        .loader, & button{
+            width: 100%;
+            font-size: 1rem;
+            border-radius: 5px;
+            padding: 8px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background-color: var(--green);
+            color: var(--white);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 1rem;
-            width: 100%;
-            border-radius: .5rem;
-            padding: 0.5rem;
-            background-color: #fff;
-            cursor: pointer;
-    
-            & img{
-                width: 2rem;
-            }
         }
     
-        .already{
+        .extra{
             margin: auto;
             font-size: .9rem;
             color: black;
@@ -150,7 +121,7 @@
 }
 
 @media screen and (max-width: 480px) {
-    .login,.signup{
+    .signin,.signup{
         padding: 0 1rem;
         
         & form{
@@ -160,7 +131,7 @@
 }
 
 @media screen and (min-width: 481px) and (max-width: 1023px) {
-    .login,.signup{
+    .signin,.signup{
         & form{
             width: 60vw;
         }
