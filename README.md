@@ -1,8 +1,10 @@
-# Jcode 🧑‍💻
+# Jcode - Frontend
 
-Jcode is an online course platform for learning programming. This website showcases a landing page, the classes taught at Jcode, and the learning system within Jcode.
+Jcode adalah platform kursus online yang dirancang untuk belajar pemrograman dengan mudah dan efektif.
 
 👉 [Live Demo](https://jcode-2110.netlify.app/)
+<br/>
+👉 [Backend Github](https://github.com/jihadable/jcode-be)
 
 ## Tech Stack
 » Vanilla CSS
