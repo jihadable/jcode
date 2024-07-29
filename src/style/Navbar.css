@@ -113,13 +113,19 @@
                 flex-direction: column;
                 
                 & a, & button{
+                    margin: .5rem;
                     padding: 0.2rem .5rem;
                     padding-right: 2rem;
                     cursor: pointer;
+                    border-radius: .25rem;
 
                     &:hover{
                         background-color: rgb(0,0,0,.15);
                     }
+                }
+
+                & button{
+                    margin-top: 0;
                 }
 
                 &.active{

@@ -76,6 +76,8 @@
                 & div{
                     padding: 0 .25rem;
                     cursor: pointer;
+                    margin: .5rem;
+                    border-radius: .25rem;
 
                     &:hover{
                         background-color: rgb(0,0,0,.15);
