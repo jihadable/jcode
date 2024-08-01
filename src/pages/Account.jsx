@@ -1,7 +1,9 @@
 import axios from "axios";
-import { useContext, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { toast } from "react-toastify";
+import BirthInput from "../components/BirthInput";
 import Footer from "../components/Footer";
+import GenderInput from "../components/GenderInput";
 import Navbar from "../components/Navbar";
 import { AuthContext } from "../contexts/AuthContext";
 import "../style/Account.css";
@@ -11,11 +13,23 @@ export default function Account(){
 
     const { isLogin, user, setUser } = useContext(AuthContext)
 
+    const usernameInput = useRef(null)
+    const [birth, setBirth] = useState(new Date())
+    const [gender, setGender] = useState("")
+
+    useEffect(() => {
+        if (isLogin === true){
+            setGender(user.gender === 1 ? "Laki-laki" : "Perempuan")
+        }
+    }, [isLogin, user])
+
     const bioInput = useRef(null)
     const [isLoading, setIsLoading] = useState(false)
 
     const handleSave = async() => {
-        const bio = bioInput.current.value
+        const username = usernameInput.current.value
+        const bio = bioInput.current.value === "" ? null : bioInput.current.value
+        const binaryGender = gender === "Laki-laki" ? 1 : 0 
 
         try {
             setIsLoading(true)
@@ -23,7 +37,7 @@ export default function Account(){
             const token = localStorage.getItem("token")
 
             await axios.patch(usersAPIEndpoint, 
-                { bio },
+                { username, birth, gender: binaryGender, bio },
                 {
                     headers: {
                         "Authorization": "Bearer " + token
@@ -31,7 +45,7 @@ export default function Account(){
                 }
             )
 
-            setUser(user => ({...user, bio}))
+            setUser(user => ({...user, username, birth, gender: binaryGender , bio}))
             setIsLoading(false)
             toast.success("Berhasil memperbarui data pengguna")
         } catch (error) {
@@ -57,12 +71,14 @@ export default function Account(){
                 <div className="desc">
                     <div className="username">
                         <div className="label">Username</div>
-                        <div className="value">{user.username}</div>
+                        <input type="text" className="value" defaultValue={user.username} required ref={usernameInput} />
                     </div>
                     <div className="email">
                         <div className="label">Email</div>
                         <div className="value">{user.email}</div>
                     </div>
+                    <BirthInput birth={new Date(user.birth)} setBirth={setBirth} />
+                    <GenderInput gender={gender} setGender={setGender} />
                     <div className="bio">
                         <div className="label">Bio</div>
                         <textarea defaultValue={user.bio || ""} rows={5} className="value" ref={bioInput}></textarea>

@@ -124,10 +124,10 @@ export default function ExerciseSection({ problem }){
                 let output
 
                 if (selectedLang.lang == "javascript"){
-                    output = `console.log(${problem.function_name}(${testCase.input}))`
+                    output = `console.log(${problem.function_name}(${testCase.input}), "~")`
                 }
                 else if (selectedLang.lang == "python"){
-                    output = `print(${problem.function_name}(${testCase.input}))`
+                    output = `print(${problem.function_name}(${testCase.input}), "~")`
                 }
 
                 codeRunner += "\n" + output
@@ -143,12 +143,13 @@ export default function ExerciseSection({ problem }){
                 ]
             })
 
-            const outputs = data.run.output.split("\n").filter(output => output != "").slice(-testCases.length)
+            const outputs = data.run.output.split("~").map(item => item.replaceAll("\n", "").replaceAll(" ", "")).filter(output => output != "").slice(-testCases.length)
 
             const codeResults = []
             
             testCases.forEach((testCase, index) => {
-                codeResults.push(outputs[index] == testCase.expected_output)
+
+                codeResults.push(outputs[index] == testCase.expected_output.replaceAll(" ", ""))
             })
             
             setResults(codeResults)

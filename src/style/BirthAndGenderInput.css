@@ -1,0 +1,108 @@
+@import url("./index.css");
+
+.birth, .gender{
+    display: flex;
+    flex-direction: column;
+
+    .label{
+        font-size: .9rem;
+    }
+
+    .birth-menu{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .date, .month, .year{
+            width: 100%;
+            display: flex;
+            position: relative;
+
+            .value{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 1px solid var(--blue);
+                cursor: pointer;
+                width: 100%;
+            }
+
+            .menu{
+                position: absolute;
+                top: 105%;
+                left: 0;
+                right: 0;
+                background-color: var(--white);
+                color: black;
+                backdrop-filter: blur(10px);
+                border-radius: .2rem;
+                max-height: 0;
+                overflow: hidden;
+                transition: all .2s;
+                z-index: 1;
+    
+                &.active{
+                    max-height: 200px;
+                    overflow: auto;
+                }
+
+                & div{
+                    padding: 0 .25rem;
+                    cursor: pointer;
+                    margin: .5rem;
+                    border-radius: .25rem;
+
+                    &:hover{
+                        background-color: rgb(0,0,0,.15);
+                    }
+                }
+            }
+        }
+    }
+
+    .gender-dropdown{
+        width: 100%;
+        display: flex;
+        position: relative;
+
+        .value{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--blue);
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .menu{
+            position: absolute;
+            top: 105%;
+            left: 0;
+            right: 0;
+            background-color: var(--white);
+            color: black;
+            backdrop-filter: blur(10px);
+            border-radius: .2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all .2s;
+            z-index: 1;
+
+            &.active{
+                max-height: 200px;
+                overflow: auto;
+            }
+
+            & div{
+                padding: 0 .25rem;
+                cursor: pointer;
+                margin: .5rem;
+                border-radius: .25rem;
+
+                &:hover{
+                    background-color: rgb(0,0,0,.15);
+                }
+            }
+        }
+    }
+}

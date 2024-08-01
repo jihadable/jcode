@@ -3,6 +3,8 @@ import { useContext, useRef, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { toast } from "react-toastify"
 import logo from "../assets/logo-black.png"
+import BirthInput from "../components/BirthInput"
+import GenderInput from "../components/GenderInput"
 import { AuthContext } from "../contexts/AuthContext"
 import "../style/Signin-Signup.css"
 
@@ -18,6 +20,9 @@ export default function Signup(){
     const [isLoading, setIsLoading] = useState(false)
     const navigate = useNavigate()
 
+    const [birth, setBirth] = useState(new Date())
+    const [gender, setGender] = useState("Laki-laki")
+
     const handleSignup = async(e) => {
         e.preventDefault()
         const [username, email, password, confirmPassword] = [
@@ -28,7 +33,7 @@ export default function Signup(){
         ]
 
         if (password !== confirmPassword){
-            console.log("Konfirmasi password tidak sesuai")
+            toast.error("Konfirmasi password tidak sesuai")
 
             return
         }
@@ -38,7 +43,7 @@ export default function Signup(){
             const usersAPIEndpoint = import.meta.env.VITE_USERS_API_ENDPOINT
 
             const { data } = await axios.post(`${usersAPIEndpoint}/register`, {
-                username, email, password
+                username, email, password, birth, gender: gender === "Laki-laki" ? 1 : 0
             })
 
             localStorage.setItem("token", data.token)
@@ -69,6 +74,8 @@ export default function Signup(){
                     <label htmlFor="email">Email</label>
                     <input type="email" id="email" required ref={emailElement} />
                 </div>
+                <BirthInput birth={birth} setBirth={setBirth} />
+                <GenderInput gender={gender} setGender={setGender} />
                 <div className="password">
                     <label htmlFor="password">Password</label>
                     <input type="password" id="password" required ref={passwordElement} />
