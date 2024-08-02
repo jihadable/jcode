@@ -197,7 +197,7 @@ export default function ExerciseSection({ problem }){
                 }
             )
 
-            setSubmissions(submissions => ([...submissions, { problem_id: problem.id, language: selectedLang.lang, status }]))
+            setSubmissions(submissions => ([...submissions, { problem_id: problem.id, language: selectedLang.lang, status: status ? 1 : 0 }]))
         } catch (error) {
             setSubmissions([...prevSubmissions])
         }
@@ -225,7 +225,7 @@ export default function ExerciseSection({ problem }){
 
             setSubmissions(submissions.map(submission => {
                 if (submission.problem_id == problem.id){
-                    return {...submission, language: selectedLang.lang, status}
+                    return {...submission, language: selectedLang.lang, status: status ? 1 : 0}
                 }
                 else {
                     return submission
