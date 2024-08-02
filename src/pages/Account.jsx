@@ -29,7 +29,7 @@ export default function Account(){
     const handleSave = async() => {
         const username = usernameInput.current.value
         const bio = bioInput.current.value === "" ? null : bioInput.current.value
-        const binaryGender = gender === "Laki-laki" ? 1 : 0 
+        const binaryGender = gender === "Laki-laki" ? 1 : 0
 
         try {
             setIsLoading(true)

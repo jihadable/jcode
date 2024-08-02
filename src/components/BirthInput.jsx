@@ -52,7 +52,7 @@ export default function BirthInput({ birth, setBirth }){
     }, [selectedMonth, selectedYear])
 
     useEffect(() => {
-        const birthValue = new Date(`${selectedYear}-${months.indexOf(selectedMonth) + 1}-${selectedDate}`)
+        const birthValue = `${selectedYear}-${months.indexOf(selectedMonth) + 1}-${selectedDate}`
 
         setBirth(birthValue)
     }, [selectedDate, selectedMonth, selectedYear])

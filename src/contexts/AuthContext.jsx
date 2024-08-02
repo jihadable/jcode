@@ -30,7 +30,6 @@ export default function AuthProvider({ children }){
                 setIsLogin(true)
                 setUser(data.user)
             } catch(error){
-                console.log(error)
                 localStorage.removeItem("token")
                 setIsLogin(false)
                 setUser(null)
