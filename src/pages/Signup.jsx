@@ -7,10 +7,11 @@ import BirthInput from "../components/BirthInput"
 import GenderInput from "../components/GenderInput"
 import { AuthContext } from "../contexts/AuthContext"
 import "../style/Signin-Signup.css"
+import NotFound from "./NotFound"
 
 export default function Signup(){
 
-    const { setIsLogin, setUser } = useContext(AuthContext)
+    const { isLogin, setIsLogin, setUser } = useContext(AuthContext)
 
     const [
         usernameElement, emailElement, passwordElement, confirmPasswordElement
@@ -59,42 +60,50 @@ export default function Signup(){
         }
     }
 
-    return (
-        <section  className="signup">
-            <form onSubmit={handleSignup}>
-                <div className="logo">
-                    <img src={logo} alt="Logo" />
-                </div>
-                <div className="head-text">Daftar Jcode</div>
-                <div className="username">
-                    <label htmlFor="username">Username</label>
-                    <input type="text" id="username" required ref={usernameElement} />
-                </div>
-                <div className="email">
-                    <label htmlFor="email">Email</label>
-                    <input type="email" id="email" required ref={emailElement} />
-                </div>
-                <BirthInput birth={birth} setBirth={setBirth} />
-                <GenderInput gender={gender} setGender={setGender} />
-                <div className="password">
-                    <label htmlFor="password">Password</label>
-                    <input type="password" id="password" required ref={passwordElement} />
-                </div>
-                <div className="confirm-password">
-                    <label htmlFor="confirm-password">Konfirmasi password</label>
-                    <input type="password" id="confirm-password" required ref={confirmPasswordElement} />
-                </div>
-                {
-                    isLoading ?
-                    <div className="loader">
-                        <div className="spinner"></div>
-                    </div> :
-                    <button type="submit">Daftar</button>
-                }
-                <div className="extra">
-                    Sudah punya akun? <Link to={"/signin"}>Masuk</Link>
-                </div>
-            </form>
-        </section>
-    )
+    if (isLogin === true){
+        return <NotFound />
+    }
+
+    if (isLogin === false){
+        document.title = "Jcode | Daftar"
+
+        return (
+            <section  className="signup">
+                <form onSubmit={handleSignup}>
+                    <div className="logo">
+                        <img src={logo} alt="Logo" />
+                    </div>
+                    <div className="head-text">Daftar Jcode</div>
+                    <div className="username">
+                        <label htmlFor="username">Username</label>
+                        <input type="text" id="username" required ref={usernameElement} />
+                    </div>
+                    <div className="email">
+                        <label htmlFor="email">Email</label>
+                        <input type="email" id="email" required ref={emailElement} />
+                    </div>
+                    <BirthInput birth={birth} setBirth={setBirth} />
+                    <GenderInput gender={gender} setGender={setGender} />
+                    <div className="password">
+                        <label htmlFor="password">Password</label>
+                        <input type="password" id="password" required ref={passwordElement} />
+                    </div>
+                    <div className="confirm-password">
+                        <label htmlFor="confirm-password">Konfirmasi password</label>
+                        <input type="password" id="confirm-password" required ref={confirmPasswordElement} />
+                    </div>
+                    {
+                        isLoading ?
+                        <div className="loader">
+                            <div className="spinner"></div>
+                        </div> :
+                        <button type="submit">Daftar</button>
+                    }
+                    <div className="extra">
+                        Sudah punya akun? <Link to={"/signin"}>Masuk</Link>
+                    </div>
+                </form>
+            </section>
+        )
+    }
 }

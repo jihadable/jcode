@@ -7,11 +7,11 @@ export default function NotFound(){
     return (
         <div className="not-found-container">
             <div className="not-found">
-                <p>Page Not Found</p>
+                <p>Halaman tidak ditemukan</p>
                 <div className="img">
                     <img src={img404} alt="404" />
                 </div>
-                <Link to={"/"} onClick={goTop}>Back to Home</Link>
+                <Link to={"/"} onClick={goTop}>Kembali ke Beranda</Link>
             </div>
         </div>
     )

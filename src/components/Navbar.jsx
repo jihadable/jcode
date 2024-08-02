@@ -65,7 +65,7 @@ export default function Navbar({ page }){
             </div>
             <div className="extra">
             {
-                isLogin === true ?
+                isLogin === true &&
                 <div className="account-nav">
                     <div className="account-btn" onClick={() => setIsShowAccountMenu(!isShowAccountMenu)} ref={accountBtn}>
                         <img src={`${import.meta.env.VITE_AVATAR_GENERATOR}name=${user.username}`} alt="User" />
@@ -74,7 +74,10 @@ export default function Navbar({ page }){
                         <Link to={"/account"}>Akun</Link>
                         <button type="button" onClick={handleLogout}>Keluar</button>
                     </div>
-                </div> :
+                </div> 
+            }
+            {
+                isLogin === false &&
                 <Link to={"/signin"} onClick={goTop} className="signin-btn">Masuk</Link>
             }
                 <span className="mobile-menu" onClick={() => {setShowNavbar(!showNavbar)}} ref={showNavbarBtn}>
